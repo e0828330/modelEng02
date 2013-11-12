@@ -1,0 +1,9 @@
+grammar at.ac.tuwien.big.Questionnaire with org.eclipse.xtext.common.Terminals
+
+generate questionnaire "http://www.ac.at/tuwien/big/Questionnaire"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
