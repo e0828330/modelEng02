@@ -515,19 +515,19 @@ ruleLikertQuestion returns [EObject current=null]
     }
 (
 (
-		lv_from_3_0=RULE_SINT
-		{
-			newLeafNode(lv_from_3_0, grammarAccess.getLikertQuestionAccess().getFromSINTTerminalRuleCall_3_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getLikertQuestionAccess().getFromSINTParserRuleCall_3_0()); 
+	    }
+		lv_from_3_0=ruleSINT		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLikertQuestionRule());
+	            $current = createModelElementForParent(grammarAccess.getLikertQuestionRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"from",
         		lv_from_3_0, 
         		"SINT");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -537,19 +537,19 @@ ruleLikertQuestion returns [EObject current=null]
     }
 (
 (
-		lv_to_5_0=RULE_SINT
-		{
-			newLeafNode(lv_to_5_0, grammarAccess.getLikertQuestionAccess().getToSINTTerminalRuleCall_5_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getLikertQuestionAccess().getToSINTParserRuleCall_5_0()); 
+	    }
+		lv_to_5_0=ruleSINT		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLikertQuestionRule());
+	            $current = createModelElementForParent(grammarAccess.getLikertQuestionRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"to",
         		lv_to_5_0, 
         		"SINT");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -755,7 +755,39 @@ ruleEnablesQuestion returns [EObject current=null]
 
 
 
-RULE_SINT : '-'? RULE_INT;
+// Entry rule entryRuleSINT
+entryRuleSINT returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getSINTRule()); } 
+	 iv_ruleSINT=ruleSINT 
+	 { $current=$iv_ruleSINT.current.getText(); }  
+	 EOF 
+;
+
+// Rule SINT
+ruleSINT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+	kw='-' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getSINTAccess().getHyphenMinusKeyword_0()); 
+    }
+)?    this_INT_1=RULE_INT    {
+		$current.merge(this_INT_1);
+    }
+
+    { 
+    newLeafNode(this_INT_1, grammarAccess.getSINTAccess().getINTTerminalRuleCall_1()); 
+    }
+)
+    ;
+
+
+
+
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

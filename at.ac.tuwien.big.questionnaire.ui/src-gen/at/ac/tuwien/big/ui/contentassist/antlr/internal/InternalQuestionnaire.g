@@ -336,6 +336,34 @@ finally {
 
 
 
+// Entry rule entryRuleSINT
+entryRuleSINT 
+:
+{ before(grammarAccess.getSINTRule()); }
+	 ruleSINT
+{ after(grammarAccess.getSINTRule()); } 
+	 EOF 
+;
+
+// Rule SINT
+ruleSINT
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getSINTAccess().getGroup()); }
+(rule__SINT__Group__0)
+{ after(grammarAccess.getSINTAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 
 rule__Question__Alternatives
     @init {
@@ -1932,6 +1960,69 @@ finally {
 
 
 
+rule__SINT__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__SINT__Group__0__Impl
+	rule__SINT__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SINT__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getSINTAccess().getHyphenMinusKeyword_0()); }
+(
+	'-' 
+)?
+{ after(grammarAccess.getSINTAccess().getHyphenMinusKeyword_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__SINT__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__SINT__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SINT__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getSINTAccess().getINTTerminalRuleCall_1()); }
+	RULE_INT
+{ after(grammarAccess.getSINTAccess().getINTTerminalRuleCall_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
 
 rule__Questionnaire__NameAssignment_1
     @init {
@@ -2119,8 +2210,8 @@ rule__LikertQuestion__FromAssignment_3
     }
 :
 (
-{ before(grammarAccess.getLikertQuestionAccess().getFromSINTTerminalRuleCall_3_0()); }
-	RULE_SINT{ after(grammarAccess.getLikertQuestionAccess().getFromSINTTerminalRuleCall_3_0()); }
+{ before(grammarAccess.getLikertQuestionAccess().getFromSINTParserRuleCall_3_0()); }
+	ruleSINT{ after(grammarAccess.getLikertQuestionAccess().getFromSINTParserRuleCall_3_0()); }
 )
 
 ;
@@ -2134,8 +2225,8 @@ rule__LikertQuestion__ToAssignment_5
     }
 :
 (
-{ before(grammarAccess.getLikertQuestionAccess().getToSINTTerminalRuleCall_5_0()); }
-	RULE_SINT{ after(grammarAccess.getLikertQuestionAccess().getToSINTTerminalRuleCall_5_0()); }
+{ before(grammarAccess.getLikertQuestionAccess().getToSINTParserRuleCall_5_0()); }
+	ruleSINT{ after(grammarAccess.getLikertQuestionAccess().getToSINTParserRuleCall_5_0()); }
 )
 
 ;
@@ -2203,8 +2294,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-
-RULE_SINT : '-'? RULE_INT;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

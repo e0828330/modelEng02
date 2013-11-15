@@ -55,5 +55,5 @@ EnablesQuestion:
 	'enables question' '[' name=STRING ']'
 ;
 	
-terminal SINT returns ecore::EInt :
+SINT returns ecore::EInt :
     '-'?INT;

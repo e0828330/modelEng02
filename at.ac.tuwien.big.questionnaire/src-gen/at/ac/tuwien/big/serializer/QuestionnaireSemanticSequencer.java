@@ -172,8 +172,8 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getLikertQuestionAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getLikertQuestionAccess().getFromSINTTerminalRuleCall_3_0(), semanticObject.getFrom());
-		feeder.accept(grammarAccess.getLikertQuestionAccess().getToSINTTerminalRuleCall_5_0(), semanticObject.getTo());
+		feeder.accept(grammarAccess.getLikertQuestionAccess().getFromSINTParserRuleCall_3_0(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getLikertQuestionAccess().getToSINTParserRuleCall_5_0(), semanticObject.getTo());
 		feeder.finish();
 	}
 	

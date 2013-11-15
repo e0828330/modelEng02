@@ -288,10 +288,10 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cFromAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cFromSINTTerminalRuleCall_3_0 = (RuleCall)cFromAssignment_3.eContents().get(0);
+		private final RuleCall cFromSINTParserRuleCall_3_0 = (RuleCall)cFromAssignment_3.eContents().get(0);
 		private final Keyword cFullStopFullStopKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cToAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cToSINTTerminalRuleCall_5_0 = (RuleCall)cToAssignment_5.eContents().get(0);
+		private final RuleCall cToSINTParserRuleCall_5_0 = (RuleCall)cToAssignment_5.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//LikertQuestion:
@@ -317,7 +317,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		public Assignment getFromAssignment_3() { return cFromAssignment_3; }
 
 		//SINT
-		public RuleCall getFromSINTTerminalRuleCall_3_0() { return cFromSINTTerminalRuleCall_3_0; }
+		public RuleCall getFromSINTParserRuleCall_3_0() { return cFromSINTParserRuleCall_3_0; }
 
 		//".."
 		public Keyword getFullStopFullStopKeyword_4() { return cFullStopFullStopKeyword_4; }
@@ -326,7 +326,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		public Assignment getToAssignment_5() { return cToAssignment_5; }
 
 		//SINT
-		public RuleCall getToSINTTerminalRuleCall_5_0() { return cToSINTTerminalRuleCall_5_0; }
+		public RuleCall getToSINTParserRuleCall_5_0() { return cToSINTParserRuleCall_5_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_6() { return cRightParenthesisKeyword_6; }
@@ -435,6 +435,26 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		//"]"
 		public Keyword getRightSquareBracketKeyword_3() { return cRightSquareBracketKeyword_3; }
 	}
+
+	public class SINTElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SINT");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		//SINT returns ecore::EInt:
+		//	"-"? INT;
+		public ParserRule getRule() { return rule; }
+
+		//"-"? INT
+		public Group getGroup() { return cGroup; }
+
+		//"-"?
+		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+	}
 	
 	
 	private QuestionnaireElements pQuestionnaire;
@@ -447,7 +467,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	private SimpleAnswerElements pSimpleAnswer;
 	private InputAnswerElements pInputAnswer;
 	private EnablesQuestionElements pEnablesQuestion;
-	private TerminalRule tSINT;
+	private SINTElements pSINT;
 	
 	private final Grammar grammar;
 
@@ -588,11 +608,15 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		return getEnablesQuestionAccess().getRule();
 	}
 
-	//terminal SINT returns ecore::EInt:
+	//SINT returns ecore::EInt:
 	//	"-"? INT;
-	public TerminalRule getSINTRule() {
-		return (tSINT != null) ? tSINT : (tSINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "SINT"));
-	} 
+	public SINTElements getSINTAccess() {
+		return (pSINT != null) ? pSINT : (pSINT = new SINTElements());
+	}
+	
+	public ParserRule getSINTRule() {
+		return getSINTAccess().getRule();
+	}
 
 	//terminal ID:
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
