@@ -56,7 +56,7 @@ EnablesQuestion:
 ;
 
 terminal QUOTED_STRING returns ecore::EString:
-	'"' * '"';
+	'"' STRING '"';
 	
 terminal SINT returns ecore::EInt :
     '-'?('0'..'9')+;
