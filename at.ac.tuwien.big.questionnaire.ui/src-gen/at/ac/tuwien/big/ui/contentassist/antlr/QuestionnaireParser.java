@@ -54,10 +54,8 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInputAnswerAccess().getGroup(), "rule__InputAnswer__Group__0");
 					put(grammarAccess.getEnablesQuestionAccess().getGroup(), "rule__EnablesQuestion__Group__0");
 					put(grammarAccess.getSINTAccess().getGroup(), "rule__SINT__Group__0");
-					put(grammarAccess.getQuestionnaireAccess().getNameAssignment_1(), "rule__Questionnaire__NameAssignment_1");
 					put(grammarAccess.getQuestionnaireAccess().getGroupsAssignment_3(), "rule__Questionnaire__GroupsAssignment_3");
 					put(grammarAccess.getQuestionnaireAccess().getGroupsAssignment_4_1(), "rule__Questionnaire__GroupsAssignment_4_1");
-					put(grammarAccess.getGroupAccess().getNameAssignment_1(), "rule__Group__NameAssignment_1");
 					put(grammarAccess.getGroupAccess().getQuestionsAssignment_3(), "rule__Group__QuestionsAssignment_3");
 					put(grammarAccess.getGroupAccess().getQuestionsAssignment_4_1(), "rule__Group__QuestionsAssignment_4_1");
 					put(grammarAccess.getOpenQuestionAccess().getNameAssignment_2(), "rule__OpenQuestion__NameAssignment_2");

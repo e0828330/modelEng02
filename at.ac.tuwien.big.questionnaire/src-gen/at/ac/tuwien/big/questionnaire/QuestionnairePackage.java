@@ -67,22 +67,13 @@ public interface QuestionnairePackage extends EPackage
   int QUESTIONNAIRE = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUESTIONNAIRE__NAME = 0;
-
-  /**
    * The feature id for the '<em><b>Groups</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUESTIONNAIRE__GROUPS = 1;
+  int QUESTIONNAIRE__GROUPS = 0;
 
   /**
    * The number of structural features of the '<em>Questionnaire</em>' class.
@@ -91,7 +82,7 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTIONNAIRE_FEATURE_COUNT = 2;
+  int QUESTIONNAIRE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.GroupImpl <em>Group</em>}' class.
@@ -104,22 +95,13 @@ public interface QuestionnairePackage extends EPackage
   int GROUP = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GROUP__NAME = 0;
-
-  /**
    * The feature id for the '<em><b>Questions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GROUP__QUESTIONS = 1;
+  int GROUP__QUESTIONS = 0;
 
   /**
    * The number of structural features of the '<em>Group</em>' class.
@@ -128,7 +110,7 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    * @ordered
    */
-  int GROUP_FEATURE_COUNT = 2;
+  int GROUP_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.QuestionImpl <em>Question</em>}' class.
@@ -429,17 +411,6 @@ public interface QuestionnairePackage extends EPackage
   EClass getQuestionnaire();
 
   /**
-   * Returns the meta object for the attribute '{@link at.ac.tuwien.big.questionnaire.Questionnaire#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see at.ac.tuwien.big.questionnaire.Questionnaire#getName()
-   * @see #getQuestionnaire()
-   * @generated
-   */
-  EAttribute getQuestionnaire_Name();
-
-  /**
    * Returns the meta object for the containment reference list '{@link at.ac.tuwien.big.questionnaire.Questionnaire#getGroups <em>Groups</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -459,17 +430,6 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    */
   EClass getGroup();
-
-  /**
-   * Returns the meta object for the attribute '{@link at.ac.tuwien.big.questionnaire.Group#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see at.ac.tuwien.big.questionnaire.Group#getName()
-   * @see #getGroup()
-   * @generated
-   */
-  EAttribute getGroup_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link at.ac.tuwien.big.questionnaire.Group#getQuestions <em>Questions</em>}'.
@@ -684,14 +644,6 @@ public interface QuestionnairePackage extends EPackage
     EClass QUESTIONNAIRE = eINSTANCE.getQuestionnaire();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute QUESTIONNAIRE__NAME = eINSTANCE.getQuestionnaire_Name();
-
-    /**
      * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -708,14 +660,6 @@ public interface QuestionnairePackage extends EPackage
      * @generated
      */
     EClass GROUP = eINSTANCE.getGroup();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GROUP__NAME = eINSTANCE.getGroup_Name();
 
     /**
      * The meta object literal for the '<em><b>Questions</b></em>' containment reference list feature.

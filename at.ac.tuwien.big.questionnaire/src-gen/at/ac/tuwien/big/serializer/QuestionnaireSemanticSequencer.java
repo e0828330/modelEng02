@@ -115,7 +115,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING answers+=Answer answers+=Answer* default=[Answer|ID]?)
+	 *     (name=STRING answers+=Answer answers+=Answer* default=[Answer|STRING]?)
 	 */
 	protected void sequence_ClosedQuestion(EObject context, ClosedQuestion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -124,7 +124,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     question=[Question|ID]
+	 *     question=[Question|STRING]
 	 */
 	protected void sequence_EnablesQuestion(EObject context, EnablesQuestion semanticObject) {
 		if(errorAcceptor != null) {
@@ -133,14 +133,14 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getEnablesQuestionAccess().getQuestionQuestionIDTerminalRuleCall_2_0_1(), semanticObject.getQuestion());
+		feeder.accept(grammarAccess.getEnablesQuestionAccess().getQuestionQuestionSTRINGTerminalRuleCall_2_0_1(), semanticObject.getQuestion());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING questions+=Question questions+=Question*)
+	 *     (questions+=Question questions+=Question*)
 	 */
 	protected void sequence_Group(EObject context, Group semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -196,7 +196,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING groups+=Group groups+=Group*)
+	 *     (groups+=Group groups+=Group*)
 	 */
 	protected void sequence_Questionnaire(EObject context, Questionnaire semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

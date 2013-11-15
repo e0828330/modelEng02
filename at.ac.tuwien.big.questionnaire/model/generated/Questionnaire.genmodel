@@ -8,11 +8,9 @@
   <genPackages prefix="Questionnaire" basePackage="at.ac.tuwien.big" disposableProviderFactory="true"
       fileExtensions="questionnaire" ecorePackage="Questionnaire.ecore#/">
     <genClasses ecoreClass="Questionnaire.ecore#//Questionnaire">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//Questionnaire/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//Questionnaire/groups"/>
     </genClasses>
     <genClasses ecoreClass="Questionnaire.ecore#//Group">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//Group/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//Group/questions"/>
     </genClasses>
     <genClasses ecoreClass="Questionnaire.ecore#//Question">
