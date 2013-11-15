@@ -40,7 +40,7 @@ LikertQuestion:
 /* Answers */
 
 Answer:
-	(SimpleAnswer | InputAnswer) 
+	(SimpleAnswer | InputAnswer) enables=EnablesQuestion? 
 ;
 
 SimpleAnswer:
