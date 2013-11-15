@@ -22,7 +22,7 @@ Question:
 ;
 
 OpenQuestion:
-	('mandatory' | 'multiline')? 'open' name=QUOTED_STRING
+	('mandatory' | 'multiline')? 'open question' name=QUOTED_STRING
 ;
 
 ClosedQuestion:
@@ -34,7 +34,7 @@ ClosedQuestion:
 ;
 
 LikertQuestion:
-	'likert question' name=QUOTED_STRING '(-'INT'..'INT')' // !?
+	'likert question' name=QUOTED_STRING '(' from=SINT '..' to=SINT ')'
 ;
 
 /* Answers */
@@ -57,3 +57,6 @@ EnablesQuestion:
 
 terminal QUOTED_STRING returns ecore::EString:
 	'"' * '"';
+	
+terminal SINT returns ecore::EInt :
+    '-'?('0'..'9')+;
