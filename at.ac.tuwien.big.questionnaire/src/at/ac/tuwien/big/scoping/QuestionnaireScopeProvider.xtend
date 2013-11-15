@@ -6,12 +6,14 @@ package at.ac.tuwien.big.scoping
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
+import at.ac.tuwien.big.questionnaire.ClosedQuestion
+import org.eclipse.xtext.scoping.Scopes
 
 /**
  * This class contains custom scoping description.
  * 
  * see : http://www.eclipse.org/Xtext/documentation.html#scoping
- * on how and when to use it 
+ * on how and when to use it 	
  *
  */
 class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
@@ -19,6 +21,11 @@ class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
 	// TODO:
 	override getScope(EObject context, EReference reference) {
 		println("Test")
+		if (context instanceof ClosedQuestion) {
+			val closedQuestion = context as ClosedQuestion
+			println("CLOSED QUESTION");
+			return Scopes.scopeFor(closedQuestion.answers)
+		}
 		return super.getScope(context, reference)
 	}
 }
