@@ -133,7 +133,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

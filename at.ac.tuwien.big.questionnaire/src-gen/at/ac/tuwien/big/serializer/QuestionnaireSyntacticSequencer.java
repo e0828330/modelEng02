@@ -58,7 +58,7 @@ public class QuestionnaireSyntacticSequencer extends AbstractSyntacticSequencer 
 	
 	/**
 	 * Syntax:
-	 *     ('multiline' | 'mandatory')?
+	 *     ('mandatory' | 'multiline')?
 	 */
 	protected void emit_OpenQuestion___MandatoryKeyword_0_0_or_MultilineKeyword_0_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

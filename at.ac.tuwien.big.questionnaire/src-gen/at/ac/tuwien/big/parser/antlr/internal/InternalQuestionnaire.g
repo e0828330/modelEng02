@@ -392,63 +392,67 @@ ruleClosedQuestion returns [EObject current=null]
 	    }
 
 )
-)	otherlv_4='answers [' 
+)	otherlv_4='answers' 
     {
     	newLeafNode(otherlv_4, grammarAccess.getClosedQuestionAccess().getAnswersKeyword_3());
     }
+	otherlv_5='[' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getClosedQuestionAccess().getLeftSquareBracketKeyword_4());
+    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getClosedQuestionAccess().getAnswersAnswerParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getClosedQuestionAccess().getAnswersAnswerParserRuleCall_5_0()); 
 	    }
-		lv_answers_5_0=ruleAnswer		{
+		lv_answers_6_0=ruleAnswer		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getClosedQuestionRule());
 	        }
        		add(
        			$current, 
        			"answers",
-        		lv_answers_5_0, 
+        		lv_answers_6_0, 
         		"Answer");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_6=',' 
+)(	otherlv_7=',' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getClosedQuestionAccess().getCommaKeyword_5_0());
+    	newLeafNode(otherlv_7, grammarAccess.getClosedQuestionAccess().getCommaKeyword_6_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getClosedQuestionAccess().getAnswersAnswerParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getClosedQuestionAccess().getAnswersAnswerParserRuleCall_6_1_0()); 
 	    }
-		lv_answers_7_0=ruleAnswer		{
+		lv_answers_8_0=ruleAnswer		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getClosedQuestionRule());
 	        }
        		add(
        			$current, 
        			"answers",
-        		lv_answers_7_0, 
+        		lv_answers_8_0, 
         		"Answer");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_8=']' 
+))*	otherlv_9=']' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getClosedQuestionAccess().getRightSquareBracketKeyword_6());
+    	newLeafNode(otherlv_9, grammarAccess.getClosedQuestionAccess().getRightSquareBracketKeyword_7());
     }
-(	otherlv_9='default answer is' 
+(	otherlv_10='default answer is' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getClosedQuestionAccess().getDefaultAnswerIsKeyword_7_0());
+    	newLeafNode(otherlv_10, grammarAccess.getClosedQuestionAccess().getDefaultAnswerIsKeyword_8_0());
     }
 (
 (
-		lv_default_10_0=RULE_STRING
+		lv_default_11_0=RULE_STRING
 		{
-			newLeafNode(lv_default_10_0, grammarAccess.getClosedQuestionAccess().getDefaultSTRINGTerminalRuleCall_7_1_0()); 
+			newLeafNode(lv_default_11_0, grammarAccess.getClosedQuestionAccess().getDefaultSTRINGTerminalRuleCall_8_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -457,7 +461,7 @@ ruleClosedQuestion returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"default",
-        		lv_default_10_0, 
+        		lv_default_11_0, 
         		"STRING");
 	    }
 
@@ -718,11 +722,15 @@ ruleEnablesQuestion returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getEnablesQuestionAccess().getEnabledQuestionKeyword_0());
     }
+	otherlv_1='[' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getEnablesQuestionAccess().getLeftSquareBracketKeyword_1());
+    }
 (
 (
-		lv_name_1_0=RULE_STRING
+		lv_name_2_0=RULE_STRING
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_2_0, grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -731,19 +739,23 @@ ruleEnablesQuestion returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_2_0, 
         		"STRING");
 	    }
 
 )
-))
+)	otherlv_3=']' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getEnablesQuestionAccess().getRightSquareBracketKeyword_3());
+    }
+)
 ;
 
 
 
 
 
-RULE_SINT : '-'? ('0'..'9')+;
+RULE_SINT : '-'? RULE_INT;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

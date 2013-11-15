@@ -47,8 +47,8 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGroupAccess().getGroup_4(), "rule__Group__Group_4__0");
 					put(grammarAccess.getOpenQuestionAccess().getGroup(), "rule__OpenQuestion__Group__0");
 					put(grammarAccess.getClosedQuestionAccess().getGroup(), "rule__ClosedQuestion__Group__0");
-					put(grammarAccess.getClosedQuestionAccess().getGroup_5(), "rule__ClosedQuestion__Group_5__0");
-					put(grammarAccess.getClosedQuestionAccess().getGroup_7(), "rule__ClosedQuestion__Group_7__0");
+					put(grammarAccess.getClosedQuestionAccess().getGroup_6(), "rule__ClosedQuestion__Group_6__0");
+					put(grammarAccess.getClosedQuestionAccess().getGroup_8(), "rule__ClosedQuestion__Group_8__0");
 					put(grammarAccess.getLikertQuestionAccess().getGroup(), "rule__LikertQuestion__Group__0");
 					put(grammarAccess.getAnswerAccess().getGroup(), "rule__Answer__Group__0");
 					put(grammarAccess.getInputAnswerAccess().getGroup(), "rule__InputAnswer__Group__0");
@@ -61,16 +61,16 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGroupAccess().getQuestionsAssignment_4_1(), "rule__Group__QuestionsAssignment_4_1");
 					put(grammarAccess.getOpenQuestionAccess().getNameAssignment_2(), "rule__OpenQuestion__NameAssignment_2");
 					put(grammarAccess.getClosedQuestionAccess().getNameAssignment_2(), "rule__ClosedQuestion__NameAssignment_2");
-					put(grammarAccess.getClosedQuestionAccess().getAnswersAssignment_4(), "rule__ClosedQuestion__AnswersAssignment_4");
-					put(grammarAccess.getClosedQuestionAccess().getAnswersAssignment_5_1(), "rule__ClosedQuestion__AnswersAssignment_5_1");
-					put(grammarAccess.getClosedQuestionAccess().getDefaultAssignment_7_1(), "rule__ClosedQuestion__DefaultAssignment_7_1");
+					put(grammarAccess.getClosedQuestionAccess().getAnswersAssignment_5(), "rule__ClosedQuestion__AnswersAssignment_5");
+					put(grammarAccess.getClosedQuestionAccess().getAnswersAssignment_6_1(), "rule__ClosedQuestion__AnswersAssignment_6_1");
+					put(grammarAccess.getClosedQuestionAccess().getDefaultAssignment_8_1(), "rule__ClosedQuestion__DefaultAssignment_8_1");
 					put(grammarAccess.getLikertQuestionAccess().getNameAssignment_1(), "rule__LikertQuestion__NameAssignment_1");
 					put(grammarAccess.getLikertQuestionAccess().getFromAssignment_3(), "rule__LikertQuestion__FromAssignment_3");
 					put(grammarAccess.getLikertQuestionAccess().getToAssignment_5(), "rule__LikertQuestion__ToAssignment_5");
 					put(grammarAccess.getAnswerAccess().getEnablesAssignment_1(), "rule__Answer__EnablesAssignment_1");
 					put(grammarAccess.getSimpleAnswerAccess().getNameAssignment(), "rule__SimpleAnswer__NameAssignment");
 					put(grammarAccess.getInputAnswerAccess().getNameAssignment_0(), "rule__InputAnswer__NameAssignment_0");
-					put(grammarAccess.getEnablesQuestionAccess().getNameAssignment_1(), "rule__EnablesQuestion__NameAssignment_1");
+					put(grammarAccess.getEnablesQuestionAccess().getNameAssignment_2(), "rule__EnablesQuestion__NameAssignment_2");
 				}
 			};
 		}

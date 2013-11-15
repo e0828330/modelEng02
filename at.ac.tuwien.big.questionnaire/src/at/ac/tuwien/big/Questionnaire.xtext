@@ -27,7 +27,7 @@ OpenQuestion:
 
 ClosedQuestion:
 	'closed question allowing' ('single answer' | 'multiple answers') name=STRING
-	'answers ['
+	'answers' '['
 		answers+=Answer(',' answers+=Answer)*
 	']'
 	('default answer is' default=STRING)?
@@ -52,8 +52,8 @@ InputAnswer:
 ;
 
 EnablesQuestion:
-	'enabled question [' name=STRING ']'
+	'enables question' '[' name=STRING ']'
 ;
 	
 terminal SINT returns ecore::EInt :
-    '-'?('0'..'9')+;
+    '-'?INT;
