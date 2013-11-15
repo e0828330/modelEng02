@@ -3,7 +3,11 @@
  */
 package at.ac.tuwien.big.scoping;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import org.eclipse.xtext.xbase.lib.InputOutput;
 
 /**
  * This class contains custom scoping description.
@@ -13,4 +17,8 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
  */
 @SuppressWarnings("all")
 public class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
+  public IScope getScope(final EObject context, final EReference reference) {
+    InputOutput.<String>println("Test");
+    return super.getScope(context, reference);
+  }
 }

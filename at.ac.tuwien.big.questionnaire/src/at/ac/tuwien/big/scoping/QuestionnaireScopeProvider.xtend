@@ -3,6 +3,10 @@
  */
 package at.ac.tuwien.big.scoping
 
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EReference
+import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
+
 /**
  * This class contains custom scoping description.
  * 
@@ -10,6 +14,10 @@ package at.ac.tuwien.big.scoping
  * on how and when to use it 
  *
  */
-class QuestionnaireScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider {
-
+class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
+	
+	override getScope(EObject context, EReference reference) {
+		println("Test")
+		return super.getScope(context, reference)
+	}
 }
