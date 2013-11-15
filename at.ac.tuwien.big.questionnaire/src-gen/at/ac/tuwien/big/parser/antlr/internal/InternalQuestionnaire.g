@@ -718,9 +718,9 @@ ruleEnablesQuestion returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='enabled question' 
+(	otherlv_0='enables question' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getEnablesQuestionAccess().getEnabledQuestionKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getEnablesQuestionAccess().getEnablesQuestionKeyword_0());
     }
 	otherlv_1='[' 
     {

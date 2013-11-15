@@ -407,21 +407,21 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	public class EnablesQuestionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EnablesQuestion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cEnabledQuestionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cEnablesQuestionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftSquareBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//EnablesQuestion:
-		//	"enabled question" "[" name=STRING "]";
+		//	"enables question" "[" name=STRING "]";
 		public ParserRule getRule() { return rule; }
 
-		//"enabled question" "[" name=STRING "]"
+		//"enables question" "[" name=STRING "]"
 		public Group getGroup() { return cGroup; }
 
-		//"enabled question"
-		public Keyword getEnabledQuestionKeyword_0() { return cEnabledQuestionKeyword_0; }
+		//"enables question"
+		public Keyword getEnablesQuestionKeyword_0() { return cEnablesQuestionKeyword_0; }
 
 		//"["
 		public Keyword getLeftSquareBracketKeyword_1() { return cLeftSquareBracketKeyword_1; }
@@ -579,7 +579,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//EnablesQuestion:
-	//	"enabled question" "[" name=STRING "]";
+	//	"enables question" "[" name=STRING "]";
 	public EnablesQuestionElements getEnablesQuestionAccess() {
 		return (pEnablesQuestion != null) ? pEnablesQuestion : (pEnablesQuestion = new EnablesQuestionElements());
 	}

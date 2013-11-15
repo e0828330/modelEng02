@@ -1821,11 +1821,11 @@ rule__EnablesQuestion__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getEnablesQuestionAccess().getEnabledQuestionKeyword_0()); }
+{ before(grammarAccess.getEnablesQuestionAccess().getEnablesQuestionKeyword_0()); }
 
-	'enabled question' 
+	'enables question' 
 
-{ after(grammarAccess.getEnablesQuestionAccess().getEnabledQuestionKeyword_0()); }
+{ after(grammarAccess.getEnablesQuestionAccess().getEnablesQuestionKeyword_0()); }
 )
 
 ;

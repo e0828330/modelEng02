@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalQuestionnaireParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_SINT", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'mandatory'", "'multiline'", "'single answer'", "'multiple answers'", "'questionnaire'", "'['", "']'", "','", "'group'", "'open question'", "'closed question allowing'", "'answers'", "'default answer is'", "'likert question'", "'('", "'..'", "')'", "'...'", "'enabled question'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_SINT", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'mandatory'", "'multiline'", "'single answer'", "'multiple answers'", "'questionnaire'", "'['", "']'", "','", "'group'", "'open question'", "'closed question allowing'", "'answers'", "'default answer is'", "'likert question'", "'('", "'..'", "')'", "'...'", "'enables question'"
     };
     public static final int RULE_ID=7;
     public static final int T__29=29;
@@ -4726,21 +4726,21 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "rule__EnablesQuestion__Group__0__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1818:1: rule__EnablesQuestion__Group__0__Impl : ( 'enabled question' ) ;
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1818:1: rule__EnablesQuestion__Group__0__Impl : ( 'enables question' ) ;
     public final void rule__EnablesQuestion__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1822:1: ( ( 'enabled question' ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1823:1: ( 'enabled question' )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1822:1: ( ( 'enables question' ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1823:1: ( 'enables question' )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1823:1: ( 'enabled question' )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1824:1: 'enabled question'
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1823:1: ( 'enables question' )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1824:1: 'enables question'
             {
-             before(grammarAccess.getEnablesQuestionAccess().getEnabledQuestionKeyword_0()); 
+             before(grammarAccess.getEnablesQuestionAccess().getEnablesQuestionKeyword_0()); 
             match(input,30,FOLLOW_30_in_rule__EnablesQuestion__Group__0__Impl3603); 
-             after(grammarAccess.getEnablesQuestionAccess().getEnabledQuestionKeyword_0()); 
+             after(grammarAccess.getEnablesQuestionAccess().getEnablesQuestionKeyword_0()); 
 
             }
 

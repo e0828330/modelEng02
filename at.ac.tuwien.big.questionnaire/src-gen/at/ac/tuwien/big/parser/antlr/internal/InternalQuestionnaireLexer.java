@@ -432,10 +432,10 @@ public class InternalQuestionnaireLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:29:7: ( 'enabled question' )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:29:9: 'enabled question'
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:29:7: ( 'enables question' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:29:9: 'enables question'
             {
-            match("enabled question"); 
+            match("enables question"); 
 
 
             }
@@ -1217,7 +1217,7 @@ public class InternalQuestionnaireLexer extends Lexer {
         "\1\144\1\164\1\156\1\163\1\147\1\167\1\141\1\145\2\uffff\1\142\1"+
         "\164\1\160\1\141\1\151\1\40\1\145\1\154\1\145\1\165\1\162\1\154"+
         "\1\151\1\60\1\164\1\154\1\uffff\1\144\1\145\1\162\1\154\1\164\1"+
-        "\145\1\157\1\uffff\1\157\1\151\1\154\2\40\1\163\1\164\1\40\1\144"+
+        "\145\1\157\1\uffff\1\157\1\151\1\154\2\40\1\163\1\164\1\40\1\163"+
         "\1\156\1\162\1\156\1\145\2\uffff\1\60\1\40\1\uffff\1\40\1\156\1"+
         "\171\1\145\1\40\3\uffff\1\141\2\60\1\uffff\1\151\2\uffff\1\162\1"+
         "\145\1\60\1\uffff";
@@ -1230,7 +1230,7 @@ public class InternalQuestionnaireLexer extends Lexer {
         "\142\1\164\1\160\1\141\1\151\1\40\1\145\1\154\1\145\1\165\1\162"+
         "\1\154\1\151\1\172\1\164\1\160\1\uffff\1\144\1\145\1\162\1\154\1"+
         "\164\1\145\1\157\1\uffff\1\157\1\151\1\154\2\40\1\163\1\164\1\40"+
-        "\1\144\1\156\1\162\1\156\1\145\2\uffff\1\172\1\40\1\uffff\1\40\1"+
+        "\1\163\1\156\1\162\1\156\1\145\2\uffff\1\172\1\40\1\uffff\1\40\1"+
         "\156\1\171\1\145\1\40\3\uffff\1\141\2\172\1\uffff\1\151\2\uffff"+
         "\1\162\1\145\1\172\1\uffff";
     static final String DFA13_acceptS =

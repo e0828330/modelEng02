@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_SINT", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'questionnaire'", "'['", "','", "']'", "'group'", "'mandatory'", "'multiline'", "'open question'", "'closed question allowing'", "'single answer'", "'multiple answers'", "'answers'", "'default answer is'", "'likert question'", "'('", "'..'", "')'", "'...'", "'enabled question'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_SINT", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'questionnaire'", "'['", "','", "']'", "'group'", "'mandatory'", "'multiline'", "'open question'", "'closed question allowing'", "'single answer'", "'multiple answers'", "'answers'", "'default answer is'", "'likert question'", "'('", "'..'", "')'", "'...'", "'enables question'"
     };
     public static final int RULE_ID=7;
     public static final int T__29=29;
@@ -1694,7 +1694,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnablesQuestion"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:717:1: ruleEnablesQuestion returns [EObject current=null] : (otherlv_0= 'enabled question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' ) ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:717:1: ruleEnablesQuestion returns [EObject current=null] : (otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' ) ;
     public final EObject ruleEnablesQuestion() throws RecognitionException {
         EObject current = null;
 
@@ -1706,15 +1706,15 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:720:28: ( (otherlv_0= 'enabled question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:1: (otherlv_0= 'enabled question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:720:28: ( (otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:1: (otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:1: (otherlv_0= 'enabled question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:3: otherlv_0= 'enabled question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']'
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:1: (otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:3: otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']'
             {
             otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleEnablesQuestion1569); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getEnablesQuestionAccess().getEnabledQuestionKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getEnablesQuestionAccess().getEnablesQuestionKeyword_0());
                 
             otherlv_1=(Token)match(input,13,FOLLOW_13_in_ruleEnablesQuestion1581); 
 
