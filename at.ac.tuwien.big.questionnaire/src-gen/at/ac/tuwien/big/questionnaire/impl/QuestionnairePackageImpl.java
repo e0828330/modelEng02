@@ -4,7 +4,6 @@ package at.ac.tuwien.big.questionnaire.impl;
 
 import at.ac.tuwien.big.questionnaire.Answer;
 import at.ac.tuwien.big.questionnaire.ClosedQuestion;
-import at.ac.tuwien.big.questionnaire.EnablesQuestion;
 import at.ac.tuwien.big.questionnaire.Group;
 import at.ac.tuwien.big.questionnaire.InputAnswer;
 import at.ac.tuwien.big.questionnaire.LikertQuestion;
@@ -94,13 +93,6 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
   private EClass inputAnswerEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass enablesQuestionEClass = null;
-
-  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -178,9 +170,19 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getQuestionnaire_Name()
+  {
+    return (EAttribute)questionnaireEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getQuestionnaire_Groups()
   {
-    return (EReference)questionnaireEClass.getEStructuralFeatures().get(0);
+    return (EReference)questionnaireEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -198,9 +200,19 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getGroup_Name()
+  {
+    return (EAttribute)groupEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getGroup_Questions()
   {
-    return (EReference)groupEClass.getEStructuralFeatures().get(0);
+    return (EReference)groupEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -308,19 +320,9 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAnswer_Enables()
-  {
-    return (EReference)answerEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getAnswer_Name()
   {
-    return (EAttribute)answerEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)answerEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -338,29 +340,19 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getSimpleAnswer_Enables()
+  {
+    return (EReference)simpleAnswerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getInputAnswer()
   {
     return inputAnswerEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getEnablesQuestion()
-  {
-    return enablesQuestionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEnablesQuestion_Question()
-  {
-    return (EReference)enablesQuestionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -394,9 +386,11 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
 
     // Create classes and their features
     questionnaireEClass = createEClass(QUESTIONNAIRE);
+    createEAttribute(questionnaireEClass, QUESTIONNAIRE__NAME);
     createEReference(questionnaireEClass, QUESTIONNAIRE__GROUPS);
 
     groupEClass = createEClass(GROUP);
+    createEAttribute(groupEClass, GROUP__NAME);
     createEReference(groupEClass, GROUP__QUESTIONS);
 
     questionEClass = createEClass(QUESTION);
@@ -413,15 +407,12 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
     createEAttribute(likertQuestionEClass, LIKERT_QUESTION__TO);
 
     answerEClass = createEClass(ANSWER);
-    createEReference(answerEClass, ANSWER__ENABLES);
     createEAttribute(answerEClass, ANSWER__NAME);
 
     simpleAnswerEClass = createEClass(SIMPLE_ANSWER);
+    createEReference(simpleAnswerEClass, SIMPLE_ANSWER__ENABLES);
 
     inputAnswerEClass = createEClass(INPUT_ANSWER);
-
-    enablesQuestionEClass = createEClass(ENABLES_QUESTION);
-    createEReference(enablesQuestionEClass, ENABLES_QUESTION__QUESTION);
   }
 
   /**
@@ -461,9 +452,11 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
 
     // Initialize classes and features; add operations and parameters
     initEClass(questionnaireEClass, Questionnaire.class, "Questionnaire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getQuestionnaire_Name(), ecorePackage.getEString(), "name", null, 0, 1, Questionnaire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQuestionnaire_Groups(), this.getGroup(), null, "groups", null, 0, -1, Questionnaire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGroup_Questions(), this.getQuestion(), null, "questions", null, 0, -1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -480,15 +473,12 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
     initEAttribute(getLikertQuestion_To(), ecorePackage.getEInt(), "to", null, 0, 1, LikertQuestion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(answerEClass, Answer.class, "Answer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAnswer_Enables(), this.getEnablesQuestion(), null, "enables", null, 0, 1, Answer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAnswer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Answer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(simpleAnswerEClass, SimpleAnswer.class, "SimpleAnswer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSimpleAnswer_Enables(), this.getQuestion(), null, "enables", null, 0, 1, SimpleAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(inputAnswerEClass, InputAnswer.class, "InputAnswer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(enablesQuestionEClass, EnablesQuestion.class, "EnablesQuestion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEnablesQuestion_Question(), this.getQuestion(), null, "question", null, 0, 1, EnablesQuestion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

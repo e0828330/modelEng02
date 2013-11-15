@@ -67,13 +67,22 @@ public interface QuestionnairePackage extends EPackage
   int QUESTIONNAIRE = 0;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUESTIONNAIRE__NAME = 0;
+
+  /**
    * The feature id for the '<em><b>Groups</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUESTIONNAIRE__GROUPS = 0;
+  int QUESTIONNAIRE__GROUPS = 1;
 
   /**
    * The number of structural features of the '<em>Questionnaire</em>' class.
@@ -82,7 +91,7 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTIONNAIRE_FEATURE_COUNT = 1;
+  int QUESTIONNAIRE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.GroupImpl <em>Group</em>}' class.
@@ -95,13 +104,22 @@ public interface QuestionnairePackage extends EPackage
   int GROUP = 1;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUP__NAME = 0;
+
+  /**
    * The feature id for the '<em><b>Questions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GROUP__QUESTIONS = 0;
+  int GROUP__QUESTIONS = 1;
 
   /**
    * The number of structural features of the '<em>Group</em>' class.
@@ -110,7 +128,7 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    * @ordered
    */
-  int GROUP_FEATURE_COUNT = 1;
+  int GROUP_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.QuestionImpl <em>Question</em>}' class.
@@ -271,22 +289,13 @@ public interface QuestionnairePackage extends EPackage
   int ANSWER = 6;
 
   /**
-   * The feature id for the '<em><b>Enables</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANSWER__ENABLES = 0;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ANSWER__NAME = 1;
+  int ANSWER__NAME = 0;
 
   /**
    * The number of structural features of the '<em>Answer</em>' class.
@@ -295,7 +304,7 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    * @ordered
    */
-  int ANSWER_FEATURE_COUNT = 2;
+  int ANSWER_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.SimpleAnswerImpl <em>Simple Answer</em>}' class.
@@ -308,15 +317,6 @@ public interface QuestionnairePackage extends EPackage
   int SIMPLE_ANSWER = 7;
 
   /**
-   * The feature id for the '<em><b>Enables</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_ANSWER__ENABLES = ANSWER__ENABLES;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -326,13 +326,22 @@ public interface QuestionnairePackage extends EPackage
   int SIMPLE_ANSWER__NAME = ANSWER__NAME;
 
   /**
+   * The feature id for the '<em><b>Enables</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIMPLE_ANSWER__ENABLES = ANSWER_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Simple Answer</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIMPLE_ANSWER_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 0;
+  int SIMPLE_ANSWER_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.InputAnswerImpl <em>Input Answer</em>}' class.
@@ -343,15 +352,6 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    */
   int INPUT_ANSWER = 8;
-
-  /**
-   * The feature id for the '<em><b>Enables</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INPUT_ANSWER__ENABLES = ANSWER__ENABLES;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -371,34 +371,6 @@ public interface QuestionnairePackage extends EPackage
    */
   int INPUT_ANSWER_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 0;
 
-  /**
-   * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.EnablesQuestionImpl <em>Enables Question</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see at.ac.tuwien.big.questionnaire.impl.EnablesQuestionImpl
-   * @see at.ac.tuwien.big.questionnaire.impl.QuestionnairePackageImpl#getEnablesQuestion()
-   * @generated
-   */
-  int ENABLES_QUESTION = 9;
-
-  /**
-   * The feature id for the '<em><b>Question</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENABLES_QUESTION__QUESTION = 0;
-
-  /**
-   * The number of structural features of the '<em>Enables Question</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENABLES_QUESTION_FEATURE_COUNT = 1;
-
 
   /**
    * Returns the meta object for class '{@link at.ac.tuwien.big.questionnaire.Questionnaire <em>Questionnaire</em>}'.
@@ -409,6 +381,17 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    */
   EClass getQuestionnaire();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.ac.tuwien.big.questionnaire.Questionnaire#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see at.ac.tuwien.big.questionnaire.Questionnaire#getName()
+   * @see #getQuestionnaire()
+   * @generated
+   */
+  EAttribute getQuestionnaire_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link at.ac.tuwien.big.questionnaire.Questionnaire#getGroups <em>Groups</em>}'.
@@ -430,6 +413,17 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    */
   EClass getGroup();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.ac.tuwien.big.questionnaire.Group#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see at.ac.tuwien.big.questionnaire.Group#getName()
+   * @see #getGroup()
+   * @generated
+   */
+  EAttribute getGroup_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link at.ac.tuwien.big.questionnaire.Group#getQuestions <em>Questions</em>}'.
@@ -548,17 +542,6 @@ public interface QuestionnairePackage extends EPackage
   EClass getAnswer();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.ac.tuwien.big.questionnaire.Answer#getEnables <em>Enables</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Enables</em>'.
-   * @see at.ac.tuwien.big.questionnaire.Answer#getEnables()
-   * @see #getAnswer()
-   * @generated
-   */
-  EReference getAnswer_Enables();
-
-  /**
    * Returns the meta object for the attribute '{@link at.ac.tuwien.big.questionnaire.Answer#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -580,6 +563,17 @@ public interface QuestionnairePackage extends EPackage
   EClass getSimpleAnswer();
 
   /**
+   * Returns the meta object for the reference '{@link at.ac.tuwien.big.questionnaire.SimpleAnswer#getEnables <em>Enables</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Enables</em>'.
+   * @see at.ac.tuwien.big.questionnaire.SimpleAnswer#getEnables()
+   * @see #getSimpleAnswer()
+   * @generated
+   */
+  EReference getSimpleAnswer_Enables();
+
+  /**
    * Returns the meta object for class '{@link at.ac.tuwien.big.questionnaire.InputAnswer <em>Input Answer</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -588,27 +582,6 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    */
   EClass getInputAnswer();
-
-  /**
-   * Returns the meta object for class '{@link at.ac.tuwien.big.questionnaire.EnablesQuestion <em>Enables Question</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Enables Question</em>'.
-   * @see at.ac.tuwien.big.questionnaire.EnablesQuestion
-   * @generated
-   */
-  EClass getEnablesQuestion();
-
-  /**
-   * Returns the meta object for the reference '{@link at.ac.tuwien.big.questionnaire.EnablesQuestion#getQuestion <em>Question</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Question</em>'.
-   * @see at.ac.tuwien.big.questionnaire.EnablesQuestion#getQuestion()
-   * @see #getEnablesQuestion()
-   * @generated
-   */
-  EReference getEnablesQuestion_Question();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -644,6 +617,14 @@ public interface QuestionnairePackage extends EPackage
     EClass QUESTIONNAIRE = eINSTANCE.getQuestionnaire();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QUESTIONNAIRE__NAME = eINSTANCE.getQuestionnaire_Name();
+
+    /**
      * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -660,6 +641,14 @@ public interface QuestionnairePackage extends EPackage
      * @generated
      */
     EClass GROUP = eINSTANCE.getGroup();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GROUP__NAME = eINSTANCE.getGroup_Name();
 
     /**
      * The meta object literal for the '<em><b>Questions</b></em>' containment reference list feature.
@@ -760,14 +749,6 @@ public interface QuestionnairePackage extends EPackage
     EClass ANSWER = eINSTANCE.getAnswer();
 
     /**
-     * The meta object literal for the '<em><b>Enables</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ANSWER__ENABLES = eINSTANCE.getAnswer_Enables();
-
-    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -786,6 +767,14 @@ public interface QuestionnairePackage extends EPackage
     EClass SIMPLE_ANSWER = eINSTANCE.getSimpleAnswer();
 
     /**
+     * The meta object literal for the '<em><b>Enables</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SIMPLE_ANSWER__ENABLES = eINSTANCE.getSimpleAnswer_Enables();
+
+    /**
      * The meta object literal for the '{@link at.ac.tuwien.big.questionnaire.impl.InputAnswerImpl <em>Input Answer</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -794,24 +783,6 @@ public interface QuestionnairePackage extends EPackage
      * @generated
      */
     EClass INPUT_ANSWER = eINSTANCE.getInputAnswer();
-
-    /**
-     * The meta object literal for the '{@link at.ac.tuwien.big.questionnaire.impl.EnablesQuestionImpl <em>Enables Question</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see at.ac.tuwien.big.questionnaire.impl.EnablesQuestionImpl
-     * @see at.ac.tuwien.big.questionnaire.impl.QuestionnairePackageImpl#getEnablesQuestion()
-     * @generated
-     */
-    EClass ENABLES_QUESTION = eINSTANCE.getEnablesQuestion();
-
-    /**
-     * The meta object literal for the '<em><b>Question</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ENABLES_QUESTION__QUESTION = eINSTANCE.getEnablesQuestion_Question();
 
   }
 

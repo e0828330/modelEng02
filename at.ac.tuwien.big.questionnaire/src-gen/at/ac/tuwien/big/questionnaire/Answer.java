@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link at.ac.tuwien.big.questionnaire.Answer#getEnables <em>Enables</em>}</li>
  *   <li>{@link at.ac.tuwien.big.questionnaire.Answer#getName <em>Name</em>}</li>
  * </ul>
  * </p>
@@ -23,32 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Answer extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Enables</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Enables</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Enables</em>' containment reference.
-   * @see #setEnables(EnablesQuestion)
-   * @see at.ac.tuwien.big.questionnaire.QuestionnairePackage#getAnswer_Enables()
-   * @model containment="true"
-   * @generated
-   */
-  EnablesQuestion getEnables();
-
-  /**
-   * Sets the value of the '{@link at.ac.tuwien.big.questionnaire.Answer#getEnables <em>Enables</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Enables</em>' containment reference.
-   * @see #getEnables()
-   * @generated
-   */
-  void setEnables(EnablesQuestion value);
-
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->

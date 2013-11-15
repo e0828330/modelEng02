@@ -73,7 +73,6 @@ public class QuestionnaireFactoryImpl extends EFactoryImpl implements Questionna
       case QuestionnairePackage.ANSWER: return createAnswer();
       case QuestionnairePackage.SIMPLE_ANSWER: return createSimpleAnswer();
       case QuestionnairePackage.INPUT_ANSWER: return createInputAnswer();
-      case QuestionnairePackage.ENABLES_QUESTION: return createEnablesQuestion();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -176,17 +175,6 @@ public class QuestionnaireFactoryImpl extends EFactoryImpl implements Questionna
   {
     InputAnswerImpl inputAnswer = new InputAnswerImpl();
     return inputAnswer;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EnablesQuestion createEnablesQuestion()
-  {
-    EnablesQuestionImpl enablesQuestion = new EnablesQuestionImpl();
-    return enablesQuestion;
   }
 
   /**

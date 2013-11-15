@@ -22,7 +22,8 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Questionnaire");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cQuestionnaireKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftSquareBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cGroupsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cGroupsGroupParserRuleCall_3_0 = (RuleCall)cGroupsAssignment_3.eContents().get(0);
@@ -33,17 +34,20 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Questionnaire:
-		//	"questionnaire" STRING "[" groups+=Group ("," groups+=Group)* "]";
+		//	"questionnaire" name=STRING "[" groups+=Group ("," groups+=Group)* "]";
 		public ParserRule getRule() { return rule; }
 
-		//"questionnaire" STRING "[" groups+=Group ("," groups+=Group)* "]"
+		//"questionnaire" name=STRING "[" groups+=Group ("," groups+=Group)* "]"
 		public Group getGroup() { return cGroup; }
 
 		//"questionnaire"
 		public Keyword getQuestionnaireKeyword_0() { return cQuestionnaireKeyword_0; }
 
+		//name=STRING
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
 
 		//"["
 		public Keyword getLeftSquareBracketKeyword_2() { return cLeftSquareBracketKeyword_2; }
@@ -74,7 +78,8 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Group");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cGroupKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftSquareBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cQuestionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cQuestionsQuestionParserRuleCall_3_0 = (RuleCall)cQuestionsAssignment_3.eContents().get(0);
@@ -85,17 +90,20 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightSquareBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Group:
-		//	"group" STRING "[" questions+=Question ("," questions+=Question)* "]";
+		//	"group" name=STRING "[" questions+=Question ("," questions+=Question)* "]";
 		public ParserRule getRule() { return rule; }
 
-		//"group" STRING "[" questions+=Question ("," questions+=Question)* "]"
+		//"group" name=STRING "[" questions+=Question ("," questions+=Question)* "]"
 		public Group getGroup() { return cGroup; }
 
 		//"group"
 		public Keyword getGroupKeyword_0() { return cGroupKeyword_0; }
 
+		//name=STRING
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+		public RuleCall getNameSTRINGTerminalRuleCall_1_0() { return cNameSTRINGTerminalRuleCall_1_0; }
 
 		//"["
 		public Keyword getLeftSquareBracketKeyword_2() { return cLeftSquareBracketKeyword_2; }
@@ -330,50 +338,70 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class AnswerElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Answer");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final RuleCall cSimpleAnswerParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
-		private final RuleCall cInputAnswerParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
-		private final Assignment cEnablesAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEnablesEnablesQuestionParserRuleCall_1_0 = (RuleCall)cEnablesAssignment_1.eContents().get(0);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSimpleAnswerParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cInputAnswerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		/// * Answers * / Answer:
-		//	(SimpleAnswer | InputAnswer) enables=EnablesQuestion?;
+		//	SimpleAnswer | InputAnswer;
 		public ParserRule getRule() { return rule; }
 
-		//(SimpleAnswer | InputAnswer) enables=EnablesQuestion?
-		public Group getGroup() { return cGroup; }
-
 		//SimpleAnswer | InputAnswer
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//SimpleAnswer
-		public RuleCall getSimpleAnswerParserRuleCall_0_0() { return cSimpleAnswerParserRuleCall_0_0; }
+		public RuleCall getSimpleAnswerParserRuleCall_0() { return cSimpleAnswerParserRuleCall_0; }
 
 		//InputAnswer
-		public RuleCall getInputAnswerParserRuleCall_0_1() { return cInputAnswerParserRuleCall_0_1; }
-
-		//enables=EnablesQuestion?
-		public Assignment getEnablesAssignment_1() { return cEnablesAssignment_1; }
-
-		//EnablesQuestion
-		public RuleCall getEnablesEnablesQuestionParserRuleCall_1_0() { return cEnablesEnablesQuestionParserRuleCall_1_0; }
+		public RuleCall getInputAnswerParserRuleCall_1() { return cInputAnswerParserRuleCall_1; }
 	}
 
 	public class SimpleAnswerElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SimpleAnswer");
-		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cEnablesQuestionKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cEnablesAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final CrossReference cEnablesQuestionCrossReference_1_2_0 = (CrossReference)cEnablesAssignment_1_2.eContents().get(0);
+		private final RuleCall cEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1 = (RuleCall)cEnablesQuestionCrossReference_1_2_0.eContents().get(1);
+		private final Keyword cRightSquareBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//SimpleAnswer:
-		//	name=STRING;
+		//	name=STRING ("enables question" "[" enables=[Question|STRING] "]")?;
 		public ParserRule getRule() { return rule; }
 
+		//name=STRING ("enables question" "[" enables=[Question|STRING] "]")?
+		public Group getGroup() { return cGroup; }
+
 		//name=STRING
-		public Assignment getNameAssignment() { return cNameAssignment; }
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_0() { return cNameSTRINGTerminalRuleCall_0; }
+		public RuleCall getNameSTRINGTerminalRuleCall_0_0() { return cNameSTRINGTerminalRuleCall_0_0; }
+
+		//("enables question" "[" enables=[Question|STRING] "]")?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"enables question"
+		public Keyword getEnablesQuestionKeyword_1_0() { return cEnablesQuestionKeyword_1_0; }
+
+		//"["
+		public Keyword getLeftSquareBracketKeyword_1_1() { return cLeftSquareBracketKeyword_1_1; }
+
+		//enables=[Question|STRING]
+		public Assignment getEnablesAssignment_1_2() { return cEnablesAssignment_1_2; }
+
+		//[Question|STRING]
+		public CrossReference getEnablesQuestionCrossReference_1_2_0() { return cEnablesQuestionCrossReference_1_2_0; }
+
+		//STRING
+		public RuleCall getEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1() { return cEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_1_3() { return cRightSquareBracketKeyword_1_3; }
 	}
 
 	public class InputAnswerElements extends AbstractParserRuleElementFinder {
@@ -398,42 +426,6 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"..."
 		public Keyword getFullStopFullStopFullStopKeyword_1() { return cFullStopFullStopFullStopKeyword_1; }
-	}
-
-	public class EnablesQuestionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EnablesQuestion");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cEnablesQuestionKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftSquareBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cQuestionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cQuestionQuestionCrossReference_2_0 = (CrossReference)cQuestionAssignment_2.eContents().get(0);
-		private final RuleCall cQuestionQuestionSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cQuestionQuestionCrossReference_2_0.eContents().get(1);
-		private final Keyword cRightSquareBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//EnablesQuestion:
-		//	"enables question" "[" question=[Question|STRING] "]";
-		public ParserRule getRule() { return rule; }
-
-		//"enables question" "[" question=[Question|STRING] "]"
-		public Group getGroup() { return cGroup; }
-
-		//"enables question"
-		public Keyword getEnablesQuestionKeyword_0() { return cEnablesQuestionKeyword_0; }
-
-		//"["
-		public Keyword getLeftSquareBracketKeyword_1() { return cLeftSquareBracketKeyword_1; }
-
-		//question=[Question|STRING]
-		public Assignment getQuestionAssignment_2() { return cQuestionAssignment_2; }
-
-		//[Question|STRING]
-		public CrossReference getQuestionQuestionCrossReference_2_0() { return cQuestionQuestionCrossReference_2_0; }
-
-		//STRING
-		public RuleCall getQuestionQuestionSTRINGTerminalRuleCall_2_0_1() { return cQuestionQuestionSTRINGTerminalRuleCall_2_0_1; }
-
-		//"]"
-		public Keyword getRightSquareBracketKeyword_3() { return cRightSquareBracketKeyword_3; }
 	}
 
 	public class SINTElements extends AbstractParserRuleElementFinder {
@@ -466,7 +458,6 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	private AnswerElements pAnswer;
 	private SimpleAnswerElements pSimpleAnswer;
 	private InputAnswerElements pInputAnswer;
-	private EnablesQuestionElements pEnablesQuestion;
 	private SINTElements pSINT;
 	
 	private final Grammar grammar;
@@ -508,7 +499,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Questionnaire:
-	//	"questionnaire" STRING "[" groups+=Group ("," groups+=Group)* "]";
+	//	"questionnaire" name=STRING "[" groups+=Group ("," groups+=Group)* "]";
 	public QuestionnaireElements getQuestionnaireAccess() {
 		return (pQuestionnaire != null) ? pQuestionnaire : (pQuestionnaire = new QuestionnaireElements());
 	}
@@ -518,7 +509,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Group:
-	//	"group" STRING "[" questions+=Question ("," questions+=Question)* "]";
+	//	"group" name=STRING "[" questions+=Question ("," questions+=Question)* "]";
 	public GroupElements getGroupAccess() {
 		return (pGroup != null) ? pGroup : (pGroup = new GroupElements());
 	}
@@ -569,7 +560,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	/// * Answers * / Answer:
-	//	(SimpleAnswer | InputAnswer) enables=EnablesQuestion?;
+	//	SimpleAnswer | InputAnswer;
 	public AnswerElements getAnswerAccess() {
 		return (pAnswer != null) ? pAnswer : (pAnswer = new AnswerElements());
 	}
@@ -579,7 +570,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SimpleAnswer:
-	//	name=STRING;
+	//	name=STRING ("enables question" "[" enables=[Question|STRING] "]")?;
 	public SimpleAnswerElements getSimpleAnswerAccess() {
 		return (pSimpleAnswer != null) ? pSimpleAnswer : (pSimpleAnswer = new SimpleAnswerElements());
 	}
@@ -596,16 +587,6 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getInputAnswerRule() {
 		return getInputAnswerAccess().getRule();
-	}
-
-	//EnablesQuestion:
-	//	"enables question" "[" question=[Question|STRING] "]";
-	public EnablesQuestionElements getEnablesQuestionAccess() {
-		return (pEnablesQuestion != null) ? pEnablesQuestion : (pEnablesQuestion = new EnablesQuestionElements());
-	}
-	
-	public ParserRule getEnablesQuestionRule() {
-		return getEnablesQuestionAccess().getRule();
 	}
 
 	//SINT returns ecore::EInt:

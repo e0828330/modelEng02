@@ -3,10 +3,12 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="questionnaire" nsURI="http://www.ac.at/tuwien/big/Questionnaire"
     nsPrefix="questionnaire">
   <eClassifiers xsi:type="ecore:EClass" name="Questionnaire">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
         eType="#//Group" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Group">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="questions" upperBound="-1"
         eType="#//Question" containment="true"/>
   </eClassifiers>
@@ -24,13 +26,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Answer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="enables" eType="#//EnablesQuestion"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SimpleAnswer" eSuperTypes="#//Answer"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InputAnswer" eSuperTypes="#//Answer"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EnablesQuestion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="question" eType="#//Question"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleAnswer" eSuperTypes="#//Answer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enables" eType="#//Question"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputAnswer" eSuperTypes="#//Answer"/>
 </ecore:EPackage>

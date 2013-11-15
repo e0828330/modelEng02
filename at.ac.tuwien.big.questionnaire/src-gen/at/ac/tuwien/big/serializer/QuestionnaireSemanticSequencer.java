@@ -1,7 +1,6 @@
 package at.ac.tuwien.big.serializer;
 
 import at.ac.tuwien.big.questionnaire.ClosedQuestion;
-import at.ac.tuwien.big.questionnaire.EnablesQuestion;
 import at.ac.tuwien.big.questionnaire.Group;
 import at.ac.tuwien.big.questionnaire.InputAnswer;
 import at.ac.tuwien.big.questionnaire.LikertQuestion;
@@ -39,12 +38,6 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 					return; 
 				}
 				else break;
-			case QuestionnairePackage.ENABLES_QUESTION:
-				if(context == grammarAccess.getEnablesQuestionRule()) {
-					sequence_EnablesQuestion(context, (EnablesQuestion) semanticObject); 
-					return; 
-				}
-				else break;
 			case QuestionnairePackage.GROUP:
 				if(context == grammarAccess.getGroupRule()) {
 					sequence_Group(context, (Group) semanticObject); 
@@ -52,11 +45,8 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 				}
 				else break;
 			case QuestionnairePackage.INPUT_ANSWER:
-				if(context == grammarAccess.getAnswerRule()) {
-					sequence_Answer_InputAnswer(context, (InputAnswer) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getInputAnswerRule()) {
+				if(context == grammarAccess.getAnswerRule() ||
+				   context == grammarAccess.getInputAnswerRule()) {
 					sequence_InputAnswer(context, (InputAnswer) semanticObject); 
 					return; 
 				}
@@ -82,11 +72,8 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 				}
 				else break;
 			case QuestionnairePackage.SIMPLE_ANSWER:
-				if(context == grammarAccess.getAnswerRule()) {
-					sequence_Answer_SimpleAnswer(context, (SimpleAnswer) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getSimpleAnswerRule()) {
+				if(context == grammarAccess.getAnswerRule() ||
+				   context == grammarAccess.getSimpleAnswerRule()) {
 					sequence_SimpleAnswer(context, (SimpleAnswer) semanticObject); 
 					return; 
 				}
@@ -94,24 +81,6 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
-	
-	/**
-	 * Constraint:
-	 *     (name=STRING enables=EnablesQuestion?)
-	 */
-	protected void sequence_Answer_InputAnswer(EObject context, InputAnswer semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=STRING enables=EnablesQuestion?)
-	 */
-	protected void sequence_Answer_SimpleAnswer(EObject context, SimpleAnswer semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
 	
 	/**
 	 * Constraint:
@@ -124,23 +93,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     question=[Question|STRING]
-	 */
-	protected void sequence_EnablesQuestion(EObject context, EnablesQuestion semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, QuestionnairePackage.Literals.ENABLES_QUESTION__QUESTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, QuestionnairePackage.Literals.ENABLES_QUESTION__QUESTION));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getEnablesQuestionAccess().getQuestionQuestionSTRINGTerminalRuleCall_2_0_1(), semanticObject.getQuestion());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (questions+=Question questions+=Question*)
+	 *     (name=STRING questions+=Question questions+=Question*)
 	 */
 	protected void sequence_Group(EObject context, Group semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -152,7 +105,14 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     name=STRING
 	 */
 	protected void sequence_InputAnswer(EObject context, InputAnswer semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, QuestionnairePackage.Literals.ANSWER__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, QuestionnairePackage.Literals.ANSWER__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getInputAnswerAccess().getNameSTRINGTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -196,7 +156,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (groups+=Group groups+=Group*)
+	 *     (name=STRING groups+=Group groups+=Group*)
 	 */
 	protected void sequence_Questionnaire(EObject context, Questionnaire semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -205,7 +165,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     name=STRING
+	 *     (name=STRING enables=[Question|STRING]?)
 	 */
 	protected void sequence_SimpleAnswer(EObject context, SimpleAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

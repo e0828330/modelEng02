@@ -120,11 +120,6 @@ public class QuestionnaireAdapterFactory extends AdapterFactoryImpl
         return createInputAnswerAdapter();
       }
       @Override
-      public Adapter caseEnablesQuestion(EnablesQuestion object)
-      {
-        return createEnablesQuestionAdapter();
-      }
-      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -277,21 +272,6 @@ public class QuestionnaireAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createInputAnswerAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link at.ac.tuwien.big.questionnaire.EnablesQuestion <em>Enables Question</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see at.ac.tuwien.big.questionnaire.EnablesQuestion
-   * @generated
-   */
-  public Adapter createEnablesQuestionAdapter()
   {
     return null;
   }

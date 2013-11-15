@@ -140,13 +140,6 @@ public class QuestionnaireSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case QuestionnairePackage.ENABLES_QUESTION:
-      {
-        EnablesQuestion enablesQuestion = (EnablesQuestion)theEObject;
-        T result = caseEnablesQuestion(enablesQuestion);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       default: return defaultCase(theEObject);
     }
   }
@@ -291,22 +284,6 @@ public class QuestionnaireSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseInputAnswer(InputAnswer object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Enables Question</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Enables Question</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEnablesQuestion(EnablesQuestion object)
   {
     return null;
   }

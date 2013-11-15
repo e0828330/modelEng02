@@ -104,15 +104,6 @@ public interface QuestionnaireFactory extends EFactory
   InputAnswer createInputAnswer();
 
   /**
-   * Returns a new object of class '<em>Enables Question</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Enables Question</em>'.
-   * @generated
-   */
-  EnablesQuestion createEnablesQuestion();
-
-  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

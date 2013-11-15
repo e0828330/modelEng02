@@ -8,9 +8,11 @@
   <genPackages prefix="Questionnaire" basePackage="at.ac.tuwien.big" disposableProviderFactory="true"
       fileExtensions="questionnaire" ecorePackage="Questionnaire.ecore#/">
     <genClasses ecoreClass="Questionnaire.ecore#//Questionnaire">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//Questionnaire/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//Questionnaire/groups"/>
     </genClasses>
     <genClasses ecoreClass="Questionnaire.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//Group/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//Group/questions"/>
     </genClasses>
     <genClasses ecoreClass="Questionnaire.ecore#//Question">
@@ -26,13 +28,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//LikertQuestion/to"/>
     </genClasses>
     <genClasses ecoreClass="Questionnaire.ecore#//Answer">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//Answer/enables"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//Answer/name"/>
     </genClasses>
-    <genClasses ecoreClass="Questionnaire.ecore#//SimpleAnswer"/>
-    <genClasses ecoreClass="Questionnaire.ecore#//InputAnswer"/>
-    <genClasses ecoreClass="Questionnaire.ecore#//EnablesQuestion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//EnablesQuestion/question"/>
+    <genClasses ecoreClass="Questionnaire.ecore#//SimpleAnswer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//SimpleAnswer/enables"/>
     </genClasses>
+    <genClasses ecoreClass="Questionnaire.ecore#//InputAnswer"/>
   </genPackages>
 </genmodel:GenModel>
