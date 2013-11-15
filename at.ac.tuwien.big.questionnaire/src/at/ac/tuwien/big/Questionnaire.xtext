@@ -52,7 +52,7 @@ InputAnswer:
 ;
 
 EnablesQuestion:
-	'enabled question' name=STRING
+	'enabled question [' name=STRING ']'
 ;
 	
 terminal SINT returns ecore::EInt :
