@@ -4,13 +4,13 @@ generate questionnaire "http://www.ac.at/tuwien/big/Questionnaire"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 Questionnaire:
-	'questionnaire' name=QUOTED_STRING '['
+	'questionnaire' name=STRING '['
 		groups+=Group(',' groups+=Group)*
 	']'
 ;
 
 Group:
-	'group' name=QUOTED_STRING '['
+	'group' name=STRING '['
 		questions+=Question(',' questions+=Question)*
 	']'
 ;
@@ -22,19 +22,19 @@ Question:
 ;
 
 OpenQuestion:
-	('mandatory' | 'multiline')? 'open question' name=QUOTED_STRING
+	('mandatory' | 'multiline')? 'open question' name=STRING
 ;
 
 ClosedQuestion:
-	'closed question allowing' ('single answer' | 'multiple answers') name=QUOTED_STRING
+	'closed question allowing' ('single answer' | 'multiple answers') name=STRING
 	'answers ['
 		answers+=Answer(',' answers+=Answer)*
 	']'
-	('default answer is' default=QUOTED_STRING)?
+	('default answer is' default=STRING)?
 ;
 
 LikertQuestion:
-	'likert question' name=QUOTED_STRING '(' from=SINT '..' to=SINT ')'
+	'likert question' name=STRING '(' from=SINT '..' to=SINT ')'
 ;
 
 /* Answers */
@@ -44,19 +44,16 @@ Answer:
 ;
 
 SimpleAnswer:
-	name=QUOTED_STRING
+	name=STRING
 ;
 
 InputAnswer:
-	name=QUOTED_STRING '...'
+	name=STRING '...'
 ;
 
 EnablesQuestion:
-	'enabled question' name=QUOTED_STRING
+	'enabled question' name=STRING
 ;
-
-terminal QUOTED_STRING returns ecore::EString:
-	'"' STRING '"';
 	
 terminal SINT returns ecore::EInt :
     '-'?('0'..'9')+;

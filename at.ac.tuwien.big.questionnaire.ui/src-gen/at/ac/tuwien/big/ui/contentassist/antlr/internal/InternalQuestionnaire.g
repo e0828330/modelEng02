@@ -1840,8 +1840,8 @@ rule__Questionnaire__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getQuestionnaireAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getQuestionnaireAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getQuestionnaireAccess().getNameSTRINGTerminalRuleCall_1_0()); }
+	RULE_STRING{ after(grammarAccess.getQuestionnaireAccess().getNameSTRINGTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -1885,8 +1885,8 @@ rule__Group__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getGroupAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getGroupAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getGroupAccess().getNameSTRINGTerminalRuleCall_1_0()); }
+	RULE_STRING{ after(grammarAccess.getGroupAccess().getNameSTRINGTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -1930,8 +1930,8 @@ rule__OpenQuestion__NameAssignment_2
     }
 :
 (
-{ before(grammarAccess.getOpenQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_2_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getOpenQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_2_0()); }
+{ before(grammarAccess.getOpenQuestionAccess().getNameSTRINGTerminalRuleCall_2_0()); }
+	RULE_STRING{ after(grammarAccess.getOpenQuestionAccess().getNameSTRINGTerminalRuleCall_2_0()); }
 )
 
 ;
@@ -1945,8 +1945,8 @@ rule__ClosedQuestion__NameAssignment_2
     }
 :
 (
-{ before(grammarAccess.getClosedQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_2_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getClosedQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_2_0()); }
+{ before(grammarAccess.getClosedQuestionAccess().getNameSTRINGTerminalRuleCall_2_0()); }
+	RULE_STRING{ after(grammarAccess.getClosedQuestionAccess().getNameSTRINGTerminalRuleCall_2_0()); }
 )
 
 ;
@@ -1990,8 +1990,8 @@ rule__ClosedQuestion__DefaultAssignment_7_1
     }
 :
 (
-{ before(grammarAccess.getClosedQuestionAccess().getDefaultQUOTED_STRINGTerminalRuleCall_7_1_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getClosedQuestionAccess().getDefaultQUOTED_STRINGTerminalRuleCall_7_1_0()); }
+{ before(grammarAccess.getClosedQuestionAccess().getDefaultSTRINGTerminalRuleCall_7_1_0()); }
+	RULE_STRING{ after(grammarAccess.getClosedQuestionAccess().getDefaultSTRINGTerminalRuleCall_7_1_0()); }
 )
 
 ;
@@ -2005,8 +2005,8 @@ rule__LikertQuestion__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getLikertQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getLikertQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getLikertQuestionAccess().getNameSTRINGTerminalRuleCall_1_0()); }
+	RULE_STRING{ after(grammarAccess.getLikertQuestionAccess().getNameSTRINGTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -2065,8 +2065,8 @@ rule__SimpleAnswer__NameAssignment
     }
 :
 (
-{ before(grammarAccess.getSimpleAnswerAccess().getNameQUOTED_STRINGTerminalRuleCall_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getSimpleAnswerAccess().getNameQUOTED_STRINGTerminalRuleCall_0()); }
+{ before(grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0()); }
+	RULE_STRING{ after(grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0()); }
 )
 
 ;
@@ -2080,8 +2080,8 @@ rule__InputAnswer__NameAssignment_0
     }
 :
 (
-{ before(grammarAccess.getInputAnswerAccess().getNameQUOTED_STRINGTerminalRuleCall_0_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getInputAnswerAccess().getNameQUOTED_STRINGTerminalRuleCall_0_0()); }
+{ before(grammarAccess.getInputAnswerAccess().getNameSTRINGTerminalRuleCall_0_0()); }
+	RULE_STRING{ after(grammarAccess.getInputAnswerAccess().getNameSTRINGTerminalRuleCall_0_0()); }
 )
 
 ;
@@ -2095,8 +2095,8 @@ rule__EnablesQuestion__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getEnablesQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0()); }
-	RULE_QUOTED_STRING{ after(grammarAccess.getEnablesQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_1_0()); }
+	RULE_STRING{ after(grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_1_0()); }
 )
 
 ;
@@ -2104,8 +2104,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-
-RULE_QUOTED_STRING : '"' RULE_STRING '"';
 
 RULE_SINT : '-'? ('0'..'9')+;
 

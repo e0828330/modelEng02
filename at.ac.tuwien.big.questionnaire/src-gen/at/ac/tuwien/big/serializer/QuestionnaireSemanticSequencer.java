@@ -97,7 +97,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=QUOTED_STRING enables=EnablesQuestion?)
+	 *     (name=STRING enables=EnablesQuestion?)
 	 */
 	protected void sequence_Answer_InputAnswer(EObject context, InputAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -106,7 +106,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=QUOTED_STRING enables=EnablesQuestion?)
+	 *     (name=STRING enables=EnablesQuestion?)
 	 */
 	protected void sequence_Answer_SimpleAnswer(EObject context, SimpleAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -115,7 +115,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=QUOTED_STRING answers+=Answer answers+=Answer* default=QUOTED_STRING?)
+	 *     (name=STRING answers+=Answer answers+=Answer* default=STRING?)
 	 */
 	protected void sequence_ClosedQuestion(EObject context, ClosedQuestion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -124,7 +124,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     name=QUOTED_STRING
+	 *     name=STRING
 	 */
 	protected void sequence_EnablesQuestion(EObject context, EnablesQuestion semanticObject) {
 		if(errorAcceptor != null) {
@@ -133,14 +133,14 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getEnablesQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=QUOTED_STRING questions+=Question questions+=Question*)
+	 *     (name=STRING questions+=Question questions+=Question*)
 	 */
 	protected void sequence_Group(EObject context, Group semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -149,7 +149,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     name=QUOTED_STRING
+	 *     name=STRING
 	 */
 	protected void sequence_InputAnswer(EObject context, InputAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -158,7 +158,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=QUOTED_STRING from=SINT to=SINT)
+	 *     (name=STRING from=SINT to=SINT)
 	 */
 	protected void sequence_LikertQuestion(EObject context, LikertQuestion semanticObject) {
 		if(errorAcceptor != null) {
@@ -171,7 +171,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getLikertQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getLikertQuestionAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getLikertQuestionAccess().getFromSINTTerminalRuleCall_3_0(), semanticObject.getFrom());
 		feeder.accept(grammarAccess.getLikertQuestionAccess().getToSINTTerminalRuleCall_5_0(), semanticObject.getTo());
 		feeder.finish();
@@ -180,7 +180,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     name=QUOTED_STRING
+	 *     name=STRING
 	 */
 	protected void sequence_OpenQuestion(EObject context, OpenQuestion semanticObject) {
 		if(errorAcceptor != null) {
@@ -189,14 +189,14 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getOpenQuestionAccess().getNameQUOTED_STRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getOpenQuestionAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=QUOTED_STRING groups+=Group groups+=Group*)
+	 *     (name=STRING groups+=Group groups+=Group*)
 	 */
 	protected void sequence_Questionnaire(EObject context, Questionnaire semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -205,7 +205,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     name=QUOTED_STRING
+	 *     name=STRING
 	 */
 	protected void sequence_SimpleAnswer(EObject context, SimpleAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
