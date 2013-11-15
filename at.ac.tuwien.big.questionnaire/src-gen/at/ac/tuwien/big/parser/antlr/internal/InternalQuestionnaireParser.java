@@ -21,9 +21,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'questionnaire'", "'['", "','", "']'", "'group'", "'mandatory'", "'multiline'", "'open question'", "'closed question allowing'", "'single answer'", "'multiple answers'", "'answers'", "'default answer is'", "'likert question'", "'('", "'..'", "')'", "'...'", "'enables question'", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'questionnaire'", "'['", "','", "']'", "'group'", "'mandatory'", "'multiline'", "'open question'", "'closed question allowing'", "'single answer'", "'multiple answers'", "'answers'", "'default answer is'", "'likert question'", "'('", "'..'", "')'", "'...'", "'enables question'", "'-'"
     };
-    public static final int RULE_ID=6;
+    public static final int RULE_ID=5;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -49,7 +49,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
     public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=6;
     public static final int RULE_WS=9;
 
     // delegates
@@ -838,7 +838,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClosedQuestion"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:360:1: ruleClosedQuestion returns [EObject current=null] : (otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (lv_default_11_0= RULE_STRING ) ) )? ) ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:360:1: ruleClosedQuestion returns [EObject current=null] : (otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (otherlv_11= RULE_ID ) ) )? ) ;
     public final EObject ruleClosedQuestion() throws RecognitionException {
         EObject current = null;
 
@@ -851,7 +851,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
         Token otherlv_7=null;
         Token otherlv_9=null;
         Token otherlv_10=null;
-        Token lv_default_11_0=null;
+        Token otherlv_11=null;
         EObject lv_answers_6_0 = null;
 
         EObject lv_answers_8_0 = null;
@@ -860,11 +860,11 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:363:28: ( (otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (lv_default_11_0= RULE_STRING ) ) )? ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:364:1: (otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (lv_default_11_0= RULE_STRING ) ) )? )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:363:28: ( (otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (otherlv_11= RULE_ID ) ) )? ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:364:1: (otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (otherlv_11= RULE_ID ) ) )? )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:364:1: (otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (lv_default_11_0= RULE_STRING ) ) )? )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:364:3: otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (lv_default_11_0= RULE_STRING ) ) )?
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:364:1: (otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (otherlv_11= RULE_ID ) ) )? )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:364:3: otherlv_0= 'closed question allowing' (otherlv_1= 'single answer' | otherlv_2= 'multiple answers' ) ( (lv_name_3_0= RULE_STRING ) ) otherlv_4= 'answers' otherlv_5= '[' ( (lv_answers_6_0= ruleAnswer ) ) (otherlv_7= ',' ( (lv_answers_8_0= ruleAnswer ) ) )* otherlv_9= ']' (otherlv_10= 'default answer is' ( (otherlv_11= RULE_ID ) ) )?
             {
             otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleClosedQuestion778); 
 
@@ -1038,7 +1038,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_9, grammarAccess.getClosedQuestionAccess().getRightSquareBracketKeyword_7());
                 
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:447:1: (otherlv_10= 'default answer is' ( (lv_default_11_0= RULE_STRING ) ) )?
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:447:1: (otherlv_10= 'default answer is' ( (otherlv_11= RULE_ID ) ) )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1047,32 +1047,27 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:447:3: otherlv_10= 'default answer is' ( (lv_default_11_0= RULE_STRING ) )
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:447:3: otherlv_10= 'default answer is' ( (otherlv_11= RULE_ID ) )
                     {
                     otherlv_10=(Token)match(input,23,FOLLOW_23_in_ruleClosedQuestion938); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getClosedQuestionAccess().getDefaultAnswerIsKeyword_8_0());
                         
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:451:1: ( (lv_default_11_0= RULE_STRING ) )
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:452:1: (lv_default_11_0= RULE_STRING )
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:451:1: ( (otherlv_11= RULE_ID ) )
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:452:1: (otherlv_11= RULE_ID )
                     {
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:452:1: (lv_default_11_0= RULE_STRING )
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:453:3: lv_default_11_0= RULE_STRING
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:452:1: (otherlv_11= RULE_ID )
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:453:3: otherlv_11= RULE_ID
                     {
-                    lv_default_11_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleClosedQuestion955); 
 
-                    			newLeafNode(lv_default_11_0, grammarAccess.getClosedQuestionAccess().getDefaultSTRINGTerminalRuleCall_8_1_0()); 
-                    		
-
-                    	        if (current==null) {
+                    			if (current==null) {
                     	            current = createModelElement(grammarAccess.getClosedQuestionRule());
                     	        }
-                           		setWithLastConsumed(
-                           			current, 
-                           			"default",
-                            		lv_default_11_0, 
-                            		"STRING");
-                    	    
+                            
+                    otherlv_11=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleClosedQuestion958); 
+
+                    		newLeafNode(otherlv_11, grammarAccess.getClosedQuestionAccess().getDefaultAnswerCrossReference_8_1_0()); 
+                    	
 
                     }
 
@@ -1106,7 +1101,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLikertQuestion"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:477:1: entryRuleLikertQuestion returns [EObject current=null] : iv_ruleLikertQuestion= ruleLikertQuestion EOF ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:472:1: entryRuleLikertQuestion returns [EObject current=null] : iv_ruleLikertQuestion= ruleLikertQuestion EOF ;
     public final EObject entryRuleLikertQuestion() throws RecognitionException {
         EObject current = null;
 
@@ -1114,17 +1109,17 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:478:2: (iv_ruleLikertQuestion= ruleLikertQuestion EOF )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:479:2: iv_ruleLikertQuestion= ruleLikertQuestion EOF
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:473:2: (iv_ruleLikertQuestion= ruleLikertQuestion EOF )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:474:2: iv_ruleLikertQuestion= ruleLikertQuestion EOF
             {
              newCompositeNode(grammarAccess.getLikertQuestionRule()); 
-            pushFollow(FOLLOW_ruleLikertQuestion_in_entryRuleLikertQuestion998);
+            pushFollow(FOLLOW_ruleLikertQuestion_in_entryRuleLikertQuestion996);
             iv_ruleLikertQuestion=ruleLikertQuestion();
 
             state._fsp--;
 
              current =iv_ruleLikertQuestion; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLikertQuestion1008); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLikertQuestion1006); 
 
             }
 
@@ -1142,7 +1137,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLikertQuestion"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:486:1: ruleLikertQuestion returns [EObject current=null] : (otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')' ) ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:481:1: ruleLikertQuestion returns [EObject current=null] : (otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')' ) ;
     public final EObject ruleLikertQuestion() throws RecognitionException {
         EObject current = null;
 
@@ -1159,23 +1154,23 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:489:28: ( (otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')' ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:490:1: (otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:484:28: ( (otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')' ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:485:1: (otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')' )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:490:1: (otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')' )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:490:3: otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')'
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:485:1: (otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:485:3: otherlv_0= 'likert question' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= '(' ( (lv_from_3_0= ruleSINT ) ) otherlv_4= '..' ( (lv_to_5_0= ruleSINT ) ) otherlv_6= ')'
             {
-            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleLikertQuestion1045); 
+            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleLikertQuestion1043); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLikertQuestionAccess().getLikertQuestionKeyword_0());
                 
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:494:1: ( (lv_name_1_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:495:1: (lv_name_1_0= RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:489:1: ( (lv_name_1_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:490:1: (lv_name_1_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:495:1: (lv_name_1_0= RULE_STRING )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:496:3: lv_name_1_0= RULE_STRING
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:490:1: (lv_name_1_0= RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:491:3: lv_name_1_0= RULE_STRING
             {
-            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLikertQuestion1062); 
+            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLikertQuestion1060); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getLikertQuestionAccess().getNameSTRINGTerminalRuleCall_1_0()); 
             		
@@ -1195,20 +1190,20 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,25,FOLLOW_25_in_ruleLikertQuestion1079); 
+            otherlv_2=(Token)match(input,25,FOLLOW_25_in_ruleLikertQuestion1077); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getLikertQuestionAccess().getLeftParenthesisKeyword_2());
                 
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:516:1: ( (lv_from_3_0= ruleSINT ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:517:1: (lv_from_3_0= ruleSINT )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:511:1: ( (lv_from_3_0= ruleSINT ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:512:1: (lv_from_3_0= ruleSINT )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:517:1: (lv_from_3_0= ruleSINT )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:518:3: lv_from_3_0= ruleSINT
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:512:1: (lv_from_3_0= ruleSINT )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:513:3: lv_from_3_0= ruleSINT
             {
              
             	        newCompositeNode(grammarAccess.getLikertQuestionAccess().getFromSINTParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleSINT_in_ruleLikertQuestion1100);
+            pushFollow(FOLLOW_ruleSINT_in_ruleLikertQuestion1098);
             lv_from_3_0=ruleSINT();
 
             state._fsp--;
@@ -1230,20 +1225,20 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,26,FOLLOW_26_in_ruleLikertQuestion1112); 
+            otherlv_4=(Token)match(input,26,FOLLOW_26_in_ruleLikertQuestion1110); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getLikertQuestionAccess().getFullStopFullStopKeyword_4());
                 
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:538:1: ( (lv_to_5_0= ruleSINT ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:539:1: (lv_to_5_0= ruleSINT )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:533:1: ( (lv_to_5_0= ruleSINT ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:534:1: (lv_to_5_0= ruleSINT )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:539:1: (lv_to_5_0= ruleSINT )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:540:3: lv_to_5_0= ruleSINT
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:534:1: (lv_to_5_0= ruleSINT )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:535:3: lv_to_5_0= ruleSINT
             {
              
             	        newCompositeNode(grammarAccess.getLikertQuestionAccess().getToSINTParserRuleCall_5_0()); 
             	    
-            pushFollow(FOLLOW_ruleSINT_in_ruleLikertQuestion1133);
+            pushFollow(FOLLOW_ruleSINT_in_ruleLikertQuestion1131);
             lv_to_5_0=ruleSINT();
 
             state._fsp--;
@@ -1265,7 +1260,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleLikertQuestion1145); 
+            otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleLikertQuestion1143); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getLikertQuestionAccess().getRightParenthesisKeyword_6());
                 
@@ -1290,7 +1285,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAnswer"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:568:1: entryRuleAnswer returns [EObject current=null] : iv_ruleAnswer= ruleAnswer EOF ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:563:1: entryRuleAnswer returns [EObject current=null] : iv_ruleAnswer= ruleAnswer EOF ;
     public final EObject entryRuleAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -1298,17 +1293,17 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:569:2: (iv_ruleAnswer= ruleAnswer EOF )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:570:2: iv_ruleAnswer= ruleAnswer EOF
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:564:2: (iv_ruleAnswer= ruleAnswer EOF )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:565:2: iv_ruleAnswer= ruleAnswer EOF
             {
              newCompositeNode(grammarAccess.getAnswerRule()); 
-            pushFollow(FOLLOW_ruleAnswer_in_entryRuleAnswer1181);
+            pushFollow(FOLLOW_ruleAnswer_in_entryRuleAnswer1179);
             iv_ruleAnswer=ruleAnswer();
 
             state._fsp--;
 
              current =iv_ruleAnswer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAnswer1191); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnswer1189); 
 
             }
 
@@ -1326,7 +1321,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAnswer"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:577:1: ruleAnswer returns [EObject current=null] : ( (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )? ) ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:572:1: ruleAnswer returns [EObject current=null] : ( (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )? ) ;
     public final EObject ruleAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -1340,13 +1335,13 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:580:28: ( ( (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )? ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:581:1: ( (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )? )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:575:28: ( ( (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )? ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:576:1: ( (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )? )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:581:1: ( (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )? )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:581:2: (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )?
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:576:1: ( (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )? )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:576:2: (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer ) ( (lv_enables_2_0= ruleEnablesQuestion ) )?
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:581:2: (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:576:2: (this_SimpleAnswer_0= ruleSimpleAnswer | this_InputAnswer_1= ruleInputAnswer )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1374,12 +1369,12 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:582:5: this_SimpleAnswer_0= ruleSimpleAnswer
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:577:5: this_SimpleAnswer_0= ruleSimpleAnswer
                     {
                      
                             newCompositeNode(grammarAccess.getAnswerAccess().getSimpleAnswerParserRuleCall_0_0()); 
                         
-                    pushFollow(FOLLOW_ruleSimpleAnswer_in_ruleAnswer1239);
+                    pushFollow(FOLLOW_ruleSimpleAnswer_in_ruleAnswer1237);
                     this_SimpleAnswer_0=ruleSimpleAnswer();
 
                     state._fsp--;
@@ -1392,12 +1387,12 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:592:5: this_InputAnswer_1= ruleInputAnswer
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:587:5: this_InputAnswer_1= ruleInputAnswer
                     {
                      
                             newCompositeNode(grammarAccess.getAnswerAccess().getInputAnswerParserRuleCall_0_1()); 
                         
-                    pushFollow(FOLLOW_ruleInputAnswer_in_ruleAnswer1266);
+                    pushFollow(FOLLOW_ruleInputAnswer_in_ruleAnswer1264);
                     this_InputAnswer_1=ruleInputAnswer();
 
                     state._fsp--;
@@ -1412,7 +1407,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:600:2: ( (lv_enables_2_0= ruleEnablesQuestion ) )?
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:595:2: ( (lv_enables_2_0= ruleEnablesQuestion ) )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1421,15 +1416,15 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:601:1: (lv_enables_2_0= ruleEnablesQuestion )
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:596:1: (lv_enables_2_0= ruleEnablesQuestion )
                     {
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:601:1: (lv_enables_2_0= ruleEnablesQuestion )
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:602:3: lv_enables_2_0= ruleEnablesQuestion
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:596:1: (lv_enables_2_0= ruleEnablesQuestion )
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:597:3: lv_enables_2_0= ruleEnablesQuestion
                     {
                      
                     	        newCompositeNode(grammarAccess.getAnswerAccess().getEnablesEnablesQuestionParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleEnablesQuestion_in_ruleAnswer1287);
+                    pushFollow(FOLLOW_ruleEnablesQuestion_in_ruleAnswer1285);
                     lv_enables_2_0=ruleEnablesQuestion();
 
                     state._fsp--;
@@ -1475,7 +1470,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleAnswer"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:626:1: entryRuleSimpleAnswer returns [EObject current=null] : iv_ruleSimpleAnswer= ruleSimpleAnswer EOF ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:621:1: entryRuleSimpleAnswer returns [EObject current=null] : iv_ruleSimpleAnswer= ruleSimpleAnswer EOF ;
     public final EObject entryRuleSimpleAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -1483,17 +1478,17 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:627:2: (iv_ruleSimpleAnswer= ruleSimpleAnswer EOF )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:628:2: iv_ruleSimpleAnswer= ruleSimpleAnswer EOF
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:622:2: (iv_ruleSimpleAnswer= ruleSimpleAnswer EOF )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:623:2: iv_ruleSimpleAnswer= ruleSimpleAnswer EOF
             {
              newCompositeNode(grammarAccess.getSimpleAnswerRule()); 
-            pushFollow(FOLLOW_ruleSimpleAnswer_in_entryRuleSimpleAnswer1324);
+            pushFollow(FOLLOW_ruleSimpleAnswer_in_entryRuleSimpleAnswer1322);
             iv_ruleSimpleAnswer=ruleSimpleAnswer();
 
             state._fsp--;
 
              current =iv_ruleSimpleAnswer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleAnswer1334); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleAnswer1332); 
 
             }
 
@@ -1511,7 +1506,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleAnswer"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:635:1: ruleSimpleAnswer returns [EObject current=null] : ( (lv_name_0_0= RULE_STRING ) ) ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:630:1: ruleSimpleAnswer returns [EObject current=null] : ( (lv_name_0_0= RULE_STRING ) ) ;
     public final EObject ruleSimpleAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -1520,16 +1515,16 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:638:28: ( ( (lv_name_0_0= RULE_STRING ) ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:639:1: ( (lv_name_0_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:633:28: ( ( (lv_name_0_0= RULE_STRING ) ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:634:1: ( (lv_name_0_0= RULE_STRING ) )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:639:1: ( (lv_name_0_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:640:1: (lv_name_0_0= RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:634:1: ( (lv_name_0_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:635:1: (lv_name_0_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:640:1: (lv_name_0_0= RULE_STRING )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:641:3: lv_name_0_0= RULE_STRING
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:635:1: (lv_name_0_0= RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:636:3: lv_name_0_0= RULE_STRING
             {
-            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSimpleAnswer1375); 
+            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSimpleAnswer1373); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0()); 
             		
@@ -1567,7 +1562,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInputAnswer"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:665:1: entryRuleInputAnswer returns [EObject current=null] : iv_ruleInputAnswer= ruleInputAnswer EOF ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:660:1: entryRuleInputAnswer returns [EObject current=null] : iv_ruleInputAnswer= ruleInputAnswer EOF ;
     public final EObject entryRuleInputAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -1575,17 +1570,17 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:666:2: (iv_ruleInputAnswer= ruleInputAnswer EOF )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:667:2: iv_ruleInputAnswer= ruleInputAnswer EOF
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:661:2: (iv_ruleInputAnswer= ruleInputAnswer EOF )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:662:2: iv_ruleInputAnswer= ruleInputAnswer EOF
             {
              newCompositeNode(grammarAccess.getInputAnswerRule()); 
-            pushFollow(FOLLOW_ruleInputAnswer_in_entryRuleInputAnswer1415);
+            pushFollow(FOLLOW_ruleInputAnswer_in_entryRuleInputAnswer1413);
             iv_ruleInputAnswer=ruleInputAnswer();
 
             state._fsp--;
 
              current =iv_ruleInputAnswer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInputAnswer1425); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInputAnswer1423); 
 
             }
 
@@ -1603,7 +1598,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInputAnswer"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:674:1: ruleInputAnswer returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...' ) ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:669:1: ruleInputAnswer returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...' ) ;
     public final EObject ruleInputAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -1613,19 +1608,19 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:677:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...' ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:678:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:672:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...' ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:673:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...' )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:678:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...' )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:678:2: ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...'
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:673:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:673:2: ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= '...'
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:678:2: ( (lv_name_0_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:679:1: (lv_name_0_0= RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:673:2: ( (lv_name_0_0= RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:674:1: (lv_name_0_0= RULE_STRING )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:679:1: (lv_name_0_0= RULE_STRING )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:680:3: lv_name_0_0= RULE_STRING
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:674:1: (lv_name_0_0= RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:675:3: lv_name_0_0= RULE_STRING
             {
-            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleInputAnswer1467); 
+            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleInputAnswer1465); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getInputAnswerAccess().getNameSTRINGTerminalRuleCall_0_0()); 
             		
@@ -1645,7 +1640,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleInputAnswer1484); 
+            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleInputAnswer1482); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getInputAnswerAccess().getFullStopFullStopFullStopKeyword_1());
                 
@@ -1670,7 +1665,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEnablesQuestion"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:708:1: entryRuleEnablesQuestion returns [EObject current=null] : iv_ruleEnablesQuestion= ruleEnablesQuestion EOF ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:703:1: entryRuleEnablesQuestion returns [EObject current=null] : iv_ruleEnablesQuestion= ruleEnablesQuestion EOF ;
     public final EObject entryRuleEnablesQuestion() throws RecognitionException {
         EObject current = null;
 
@@ -1678,17 +1673,17 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:709:2: (iv_ruleEnablesQuestion= ruleEnablesQuestion EOF )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:710:2: iv_ruleEnablesQuestion= ruleEnablesQuestion EOF
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:704:2: (iv_ruleEnablesQuestion= ruleEnablesQuestion EOF )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:705:2: iv_ruleEnablesQuestion= ruleEnablesQuestion EOF
             {
              newCompositeNode(grammarAccess.getEnablesQuestionRule()); 
-            pushFollow(FOLLOW_ruleEnablesQuestion_in_entryRuleEnablesQuestion1520);
+            pushFollow(FOLLOW_ruleEnablesQuestion_in_entryRuleEnablesQuestion1518);
             iv_ruleEnablesQuestion=ruleEnablesQuestion();
 
             state._fsp--;
 
              current =iv_ruleEnablesQuestion; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEnablesQuestion1530); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEnablesQuestion1528); 
 
             }
 
@@ -1706,59 +1701,54 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEnablesQuestion"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:717:1: ruleEnablesQuestion returns [EObject current=null] : (otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' ) ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:712:1: ruleEnablesQuestion returns [EObject current=null] : (otherlv_0= 'enables question' otherlv_1= '[' ( (otherlv_2= RULE_ID ) ) otherlv_3= ']' ) ;
     public final EObject ruleEnablesQuestion() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
-        Token lv_name_2_0=null;
+        Token otherlv_2=null;
         Token otherlv_3=null;
 
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:720:28: ( (otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:1: (otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:715:28: ( (otherlv_0= 'enables question' otherlv_1= '[' ( (otherlv_2= RULE_ID ) ) otherlv_3= ']' ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:716:1: (otherlv_0= 'enables question' otherlv_1= '[' ( (otherlv_2= RULE_ID ) ) otherlv_3= ']' )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:1: (otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']' )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:721:3: otherlv_0= 'enables question' otherlv_1= '[' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= ']'
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:716:1: (otherlv_0= 'enables question' otherlv_1= '[' ( (otherlv_2= RULE_ID ) ) otherlv_3= ']' )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:716:3: otherlv_0= 'enables question' otherlv_1= '[' ( (otherlv_2= RULE_ID ) ) otherlv_3= ']'
             {
-            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleEnablesQuestion1567); 
+            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleEnablesQuestion1565); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEnablesQuestionAccess().getEnablesQuestionKeyword_0());
                 
-            otherlv_1=(Token)match(input,12,FOLLOW_12_in_ruleEnablesQuestion1579); 
+            otherlv_1=(Token)match(input,12,FOLLOW_12_in_ruleEnablesQuestion1577); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getEnablesQuestionAccess().getLeftSquareBracketKeyword_1());
                 
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:729:1: ( (lv_name_2_0= RULE_STRING ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:730:1: (lv_name_2_0= RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:724:1: ( (otherlv_2= RULE_ID ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:725:1: (otherlv_2= RULE_ID )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:730:1: (lv_name_2_0= RULE_STRING )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:731:3: lv_name_2_0= RULE_STRING
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:725:1: (otherlv_2= RULE_ID )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:726:3: otherlv_2= RULE_ID
             {
-            lv_name_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEnablesQuestion1596); 
 
-            			newLeafNode(lv_name_2_0, grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-            		
-
-            	        if (current==null) {
+            			if (current==null) {
             	            current = createModelElement(grammarAccess.getEnablesQuestionRule());
             	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_2_0, 
-                    		"STRING");
-            	    
+                    
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEnablesQuestion1597); 
+
+            		newLeafNode(otherlv_2, grammarAccess.getEnablesQuestionAccess().getQuestionQuestionCrossReference_2_0()); 
+            	
 
             }
 
 
             }
 
-            otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleEnablesQuestion1613); 
+            otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleEnablesQuestion1609); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getEnablesQuestionAccess().getRightSquareBracketKeyword_3());
                 
@@ -1783,7 +1773,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSINT"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:759:1: entryRuleSINT returns [String current=null] : iv_ruleSINT= ruleSINT EOF ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:749:1: entryRuleSINT returns [String current=null] : iv_ruleSINT= ruleSINT EOF ;
     public final String entryRuleSINT() throws RecognitionException {
         String current = null;
 
@@ -1791,17 +1781,17 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:760:2: (iv_ruleSINT= ruleSINT EOF )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:761:2: iv_ruleSINT= ruleSINT EOF
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:750:2: (iv_ruleSINT= ruleSINT EOF )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:751:2: iv_ruleSINT= ruleSINT EOF
             {
              newCompositeNode(grammarAccess.getSINTRule()); 
-            pushFollow(FOLLOW_ruleSINT_in_entryRuleSINT1650);
+            pushFollow(FOLLOW_ruleSINT_in_entryRuleSINT1646);
             iv_ruleSINT=ruleSINT();
 
             state._fsp--;
 
              current =iv_ruleSINT.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSINT1661); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSINT1657); 
 
             }
 
@@ -1819,7 +1809,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSINT"
-    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:768:1: ruleSINT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
+    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:758:1: ruleSINT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleSINT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1829,13 +1819,13 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:771:28: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:772:1: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:761:28: ( ( (kw= '-' )? this_INT_1= RULE_INT ) )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:762:1: ( (kw= '-' )? this_INT_1= RULE_INT )
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:772:1: ( (kw= '-' )? this_INT_1= RULE_INT )
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:772:2: (kw= '-' )? this_INT_1= RULE_INT
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:762:1: ( (kw= '-' )? this_INT_1= RULE_INT )
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:762:2: (kw= '-' )? this_INT_1= RULE_INT
             {
-            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:772:2: (kw= '-' )?
+            // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:762:2: (kw= '-' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1844,9 +1834,9 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:773:2: kw= '-'
+                    // ../at.ac.tuwien.big.questionnaire/src-gen/at/ac/tuwien/big/parser/antlr/internal/InternalQuestionnaire.g:763:2: kw= '-'
                     {
-                    kw=(Token)match(input,30,FOLLOW_30_in_ruleSINT1700); 
+                    kw=(Token)match(input,30,FOLLOW_30_in_ruleSINT1696); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSINTAccess().getHyphenMinusKeyword_0()); 
@@ -1857,7 +1847,7 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSINT1717); 
+            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSINT1713); 
 
             		current.merge(this_INT_1);
                 
@@ -1929,38 +1919,38 @@ public class InternalQuestionnaireParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_13_in_ruleClosedQuestion890 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_ruleAnswer_in_ruleClosedQuestion911 = new BitSet(new long[]{0x0000000000006000L});
     public static final BitSet FOLLOW_14_in_ruleClosedQuestion925 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_23_in_ruleClosedQuestion938 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleClosedQuestion955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLikertQuestion_in_entryRuleLikertQuestion998 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLikertQuestion1008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleLikertQuestion1045 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLikertQuestion1062 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleLikertQuestion1079 = new BitSet(new long[]{0x0000000040000020L});
-    public static final BitSet FOLLOW_ruleSINT_in_ruleLikertQuestion1100 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleLikertQuestion1112 = new BitSet(new long[]{0x0000000040000020L});
-    public static final BitSet FOLLOW_ruleSINT_in_ruleLikertQuestion1133 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleLikertQuestion1145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAnswer_in_entryRuleAnswer1181 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAnswer1191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleAnswer_in_ruleAnswer1239 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_ruleInputAnswer_in_ruleAnswer1266 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_ruleEnablesQuestion_in_ruleAnswer1287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleAnswer_in_entryRuleSimpleAnswer1324 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleAnswer1334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSimpleAnswer1375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInputAnswer_in_entryRuleInputAnswer1415 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInputAnswer1425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleInputAnswer1467 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleInputAnswer1484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnablesQuestion_in_entryRuleEnablesQuestion1520 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEnablesQuestion1530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleEnablesQuestion1567 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleEnablesQuestion1579 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEnablesQuestion1596 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleEnablesQuestion1613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSINT_in_entryRuleSINT1650 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSINT1661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleSINT1700 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleSINT1717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleClosedQuestion938 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleClosedQuestion958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLikertQuestion_in_entryRuleLikertQuestion996 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLikertQuestion1006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleLikertQuestion1043 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleLikertQuestion1060 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleLikertQuestion1077 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleSINT_in_ruleLikertQuestion1098 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleLikertQuestion1110 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleSINT_in_ruleLikertQuestion1131 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleLikertQuestion1143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnswer_in_entryRuleAnswer1179 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAnswer1189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleAnswer_in_ruleAnswer1237 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_ruleInputAnswer_in_ruleAnswer1264 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_ruleEnablesQuestion_in_ruleAnswer1285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleAnswer_in_entryRuleSimpleAnswer1322 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleAnswer1332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSimpleAnswer1373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInputAnswer_in_entryRuleInputAnswer1413 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInputAnswer1423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleInputAnswer1465 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleInputAnswer1482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnablesQuestion_in_entryRuleEnablesQuestion1518 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEnablesQuestion1528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleEnablesQuestion1565 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleEnablesQuestion1577 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEnablesQuestion1597 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleEnablesQuestion1609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSINT_in_entryRuleSINT1646 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSINT1657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleSINT1696 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleSINT1713 = new BitSet(new long[]{0x0000000000000002L});
 
 }

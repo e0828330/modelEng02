@@ -71,7 +71,7 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAnswerAccess().getEnablesAssignment_1(), "rule__Answer__EnablesAssignment_1");
 					put(grammarAccess.getSimpleAnswerAccess().getNameAssignment(), "rule__SimpleAnswer__NameAssignment");
 					put(grammarAccess.getInputAnswerAccess().getNameAssignment_0(), "rule__InputAnswer__NameAssignment_0");
-					put(grammarAccess.getEnablesQuestionAccess().getNameAssignment_2(), "rule__EnablesQuestion__NameAssignment_2");
+					put(grammarAccess.getEnablesQuestionAccess().getQuestionAssignment_2(), "rule__EnablesQuestion__QuestionAssignment_2");
 				}
 			};
 		}

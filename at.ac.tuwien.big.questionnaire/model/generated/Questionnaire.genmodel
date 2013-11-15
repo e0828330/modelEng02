@@ -21,7 +21,7 @@
     <genClasses ecoreClass="Questionnaire.ecore#//OpenQuestion"/>
     <genClasses ecoreClass="Questionnaire.ecore#//ClosedQuestion">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//ClosedQuestion/answers"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//ClosedQuestion/default"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//ClosedQuestion/default"/>
     </genClasses>
     <genClasses ecoreClass="Questionnaire.ecore#//LikertQuestion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//LikertQuestion/from"/>
@@ -34,7 +34,7 @@
     <genClasses ecoreClass="Questionnaire.ecore#//SimpleAnswer"/>
     <genClasses ecoreClass="Questionnaire.ecore#//InputAnswer"/>
     <genClasses ecoreClass="Questionnaire.ecore#//EnablesQuestion">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//EnablesQuestion/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//EnablesQuestion/question"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

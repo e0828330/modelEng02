@@ -3,11 +3,13 @@
 package at.ac.tuwien.big.questionnaire.impl;
 
 import at.ac.tuwien.big.questionnaire.EnablesQuestion;
+import at.ac.tuwien.big.questionnaire.Question;
 import at.ac.tuwien.big.questionnaire.QuestionnairePackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -19,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link at.ac.tuwien.big.questionnaire.impl.EnablesQuestionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link at.ac.tuwien.big.questionnaire.impl.EnablesQuestionImpl#getQuestion <em>Question</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +30,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class EnablesQuestionImpl extends MinimalEObjectImpl.Container implements EnablesQuestion
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getQuestion() <em>Question</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getQuestion()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected Question question;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +65,19 @@ public class EnablesQuestionImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public Question getQuestion()
   {
-    return name;
+    if (question != null && question.eIsProxy())
+    {
+      InternalEObject oldQuestion = (InternalEObject)question;
+      question = (Question)eResolveProxy(oldQuestion);
+      if (question != oldQuestion)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, QuestionnairePackage.ENABLES_QUESTION__QUESTION, oldQuestion, question));
+      }
+    }
+    return question;
   }
 
   /**
@@ -83,12 +85,22 @@ public class EnablesQuestionImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public Question basicGetQuestion()
   {
-    String oldName = name;
-    name = newName;
+    return question;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setQuestion(Question newQuestion)
+  {
+    Question oldQuestion = question;
+    question = newQuestion;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QuestionnairePackage.ENABLES_QUESTION__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, QuestionnairePackage.ENABLES_QUESTION__QUESTION, oldQuestion, question));
   }
 
   /**
@@ -101,8 +113,9 @@ public class EnablesQuestionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case QuestionnairePackage.ENABLES_QUESTION__NAME:
-        return getName();
+      case QuestionnairePackage.ENABLES_QUESTION__QUESTION:
+        if (resolve) return getQuestion();
+        return basicGetQuestion();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +130,8 @@ public class EnablesQuestionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case QuestionnairePackage.ENABLES_QUESTION__NAME:
-        setName((String)newValue);
+      case QuestionnairePackage.ENABLES_QUESTION__QUESTION:
+        setQuestion((Question)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +147,8 @@ public class EnablesQuestionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case QuestionnairePackage.ENABLES_QUESTION__NAME:
-        setName(NAME_EDEFAULT);
+      case QuestionnairePackage.ENABLES_QUESTION__QUESTION:
+        setQuestion((Question)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,27 +164,10 @@ public class EnablesQuestionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case QuestionnairePackage.ENABLES_QUESTION__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case QuestionnairePackage.ENABLES_QUESTION__QUESTION:
+        return question != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //EnablesQuestionImpl

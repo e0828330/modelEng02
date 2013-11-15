@@ -215,7 +215,7 @@ public interface QuestionnairePackage extends EPackage
   int CLOSED_QUESTION__ANSWERS = QUESTION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Default</b></em>' attribute.
+   * The feature id for the '<em><b>Default</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -400,13 +400,13 @@ public interface QuestionnairePackage extends EPackage
   int ENABLES_QUESTION = 9;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Question</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENABLES_QUESTION__NAME = 0;
+  int ENABLES_QUESTION__QUESTION = 0;
 
   /**
    * The number of structural features of the '<em>Enables Question</em>' class.
@@ -535,15 +535,15 @@ public interface QuestionnairePackage extends EPackage
   EReference getClosedQuestion_Answers();
 
   /**
-   * Returns the meta object for the attribute '{@link at.ac.tuwien.big.questionnaire.ClosedQuestion#getDefault <em>Default</em>}'.
+   * Returns the meta object for the reference '{@link at.ac.tuwien.big.questionnaire.ClosedQuestion#getDefault <em>Default</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Default</em>'.
+   * @return the meta object for the reference '<em>Default</em>'.
    * @see at.ac.tuwien.big.questionnaire.ClosedQuestion#getDefault()
    * @see #getClosedQuestion()
    * @generated
    */
-  EAttribute getClosedQuestion_Default();
+  EReference getClosedQuestion_Default();
 
   /**
    * Returns the meta object for class '{@link at.ac.tuwien.big.questionnaire.LikertQuestion <em>Likert Question</em>}'.
@@ -640,15 +640,15 @@ public interface QuestionnairePackage extends EPackage
   EClass getEnablesQuestion();
 
   /**
-   * Returns the meta object for the attribute '{@link at.ac.tuwien.big.questionnaire.EnablesQuestion#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link at.ac.tuwien.big.questionnaire.EnablesQuestion#getQuestion <em>Question</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see at.ac.tuwien.big.questionnaire.EnablesQuestion#getName()
+   * @return the meta object for the reference '<em>Question</em>'.
+   * @see at.ac.tuwien.big.questionnaire.EnablesQuestion#getQuestion()
    * @see #getEnablesQuestion()
    * @generated
    */
-  EAttribute getEnablesQuestion_Name();
+  EReference getEnablesQuestion_Question();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -772,12 +772,12 @@ public interface QuestionnairePackage extends EPackage
     EReference CLOSED_QUESTION__ANSWERS = eINSTANCE.getClosedQuestion_Answers();
 
     /**
-     * The meta object literal for the '<em><b>Default</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Default</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CLOSED_QUESTION__DEFAULT = eINSTANCE.getClosedQuestion_Default();
+    EReference CLOSED_QUESTION__DEFAULT = eINSTANCE.getClosedQuestion_Default();
 
     /**
      * The meta object literal for the '{@link at.ac.tuwien.big.questionnaire.impl.LikertQuestionImpl <em>Likert Question</em>}' class.
@@ -862,12 +862,12 @@ public interface QuestionnairePackage extends EPackage
     EClass ENABLES_QUESTION = eINSTANCE.getEnablesQuestion();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Question</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ENABLES_QUESTION__NAME = eINSTANCE.getEnablesQuestion_Name();
+    EReference ENABLES_QUESTION__QUESTION = eINSTANCE.getEnablesQuestion_Question();
 
   }
 

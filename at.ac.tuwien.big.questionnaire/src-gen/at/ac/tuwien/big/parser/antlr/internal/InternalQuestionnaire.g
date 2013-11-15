@@ -450,20 +450,15 @@ ruleClosedQuestion returns [EObject current=null]
     }
 (
 (
-		lv_default_11_0=RULE_STRING
 		{
-			newLeafNode(lv_default_11_0, grammarAccess.getClosedQuestionAccess().getDefaultSTRINGTerminalRuleCall_8_1_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getClosedQuestionRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"default",
-        		lv_default_11_0, 
-        		"STRING");
-	    }
+        }
+	otherlv_11=RULE_ID
+	{
+		newLeafNode(otherlv_11, grammarAccess.getClosedQuestionAccess().getDefaultAnswerCrossReference_8_1_0()); 
+	}
 
 )
 ))?)
@@ -728,20 +723,15 @@ ruleEnablesQuestion returns [EObject current=null]
     }
 (
 (
-		lv_name_2_0=RULE_STRING
 		{
-			newLeafNode(lv_name_2_0, grammarAccess.getEnablesQuestionAccess().getNameSTRINGTerminalRuleCall_2_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getEnablesQuestionRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"STRING");
-	    }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getEnablesQuestionAccess().getQuestionQuestionCrossReference_2_0()); 
+	}
 
 )
 )	otherlv_3=']' 

@@ -48,24 +48,14 @@ public class ClosedQuestionImpl extends QuestionImpl implements ClosedQuestion
   protected EList<Answer> answers;
 
   /**
-   * The default value of the '{@link #getDefault() <em>Default</em>}' attribute.
+   * The cached value of the '{@link #getDefault() <em>Default</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getDefault()
    * @generated
    * @ordered
    */
-  protected static final String DEFAULT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDefault() <em>Default</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDefault()
-   * @generated
-   * @ordered
-   */
-  protected String default_ = DEFAULT_EDEFAULT;
+  protected Answer default_;
 
   /**
    * <!-- begin-user-doc -->
@@ -107,7 +97,27 @@ public class ClosedQuestionImpl extends QuestionImpl implements ClosedQuestion
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDefault()
+  public Answer getDefault()
+  {
+    if (default_ != null && default_.eIsProxy())
+    {
+      InternalEObject oldDefault = (InternalEObject)default_;
+      default_ = (Answer)eResolveProxy(oldDefault);
+      if (default_ != oldDefault)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, QuestionnairePackage.CLOSED_QUESTION__DEFAULT, oldDefault, default_));
+      }
+    }
+    return default_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Answer basicGetDefault()
   {
     return default_;
   }
@@ -117,9 +127,9 @@ public class ClosedQuestionImpl extends QuestionImpl implements ClosedQuestion
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDefault(String newDefault)
+  public void setDefault(Answer newDefault)
   {
-    String oldDefault = default_;
+    Answer oldDefault = default_;
     default_ = newDefault;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, QuestionnairePackage.CLOSED_QUESTION__DEFAULT, oldDefault, default_));
@@ -154,7 +164,8 @@ public class ClosedQuestionImpl extends QuestionImpl implements ClosedQuestion
       case QuestionnairePackage.CLOSED_QUESTION__ANSWERS:
         return getAnswers();
       case QuestionnairePackage.CLOSED_QUESTION__DEFAULT:
-        return getDefault();
+        if (resolve) return getDefault();
+        return basicGetDefault();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -175,7 +186,7 @@ public class ClosedQuestionImpl extends QuestionImpl implements ClosedQuestion
         getAnswers().addAll((Collection<? extends Answer>)newValue);
         return;
       case QuestionnairePackage.CLOSED_QUESTION__DEFAULT:
-        setDefault((String)newValue);
+        setDefault((Answer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,7 +206,7 @@ public class ClosedQuestionImpl extends QuestionImpl implements ClosedQuestion
         getAnswers().clear();
         return;
       case QuestionnairePackage.CLOSED_QUESTION__DEFAULT:
-        setDefault(DEFAULT_EDEFAULT);
+        setDefault((Answer)null);
         return;
     }
     super.eUnset(featureID);
@@ -214,26 +225,9 @@ public class ClosedQuestionImpl extends QuestionImpl implements ClosedQuestion
       case QuestionnairePackage.CLOSED_QUESTION__ANSWERS:
         return answers != null && !answers.isEmpty();
       case QuestionnairePackage.CLOSED_QUESTION__DEFAULT:
-        return DEFAULT_EDEFAULT == null ? default_ != null : !DEFAULT_EDEFAULT.equals(default_);
+        return default_ != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (default: ");
-    result.append(default_);
-    result.append(')');
-    return result.toString();
   }
 
 } //ClosedQuestionImpl

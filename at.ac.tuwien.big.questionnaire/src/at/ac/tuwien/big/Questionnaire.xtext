@@ -30,7 +30,7 @@ ClosedQuestion:
 	'answers' '['
 		answers+=Answer(',' answers+=Answer)*
 	']'
-	('default answer is' default=STRING)?
+	('default answer is' default=[Answer])?
 ;
 
 LikertQuestion:
@@ -52,7 +52,7 @@ InputAnswer:
 ;
 
 EnablesQuestion:
-	'enables question' '[' name=STRING ']'
+	'enables question' '[' question=[Question] ']'
 ;
 	
 SINT returns ecore::EInt :
