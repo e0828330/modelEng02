@@ -5,13 +5,18 @@ package at.ac.tuwien.big.scoping;
 
 import at.ac.tuwien.big.questionnaire.Answer;
 import at.ac.tuwien.big.questionnaire.ClosedQuestion;
+import at.ac.tuwien.big.questionnaire.Group;
+import at.ac.tuwien.big.questionnaire.Question;
+import at.ac.tuwien.big.questionnaire.Questionnaire;
+import com.google.common.collect.Iterables;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
-import org.eclipse.xtext.xbase.lib.InputOutput;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xbase.lib.Procedures.Procedure2;
 
 /**
  * This class contains custom scoping description.
@@ -22,12 +27,35 @@ import org.eclipse.xtext.xbase.lib.InputOutput;
 @SuppressWarnings("all")
 public class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope getScope(final EObject context, final EReference reference) {
-    InputOutput.<String>println("Test");
     if ((context instanceof ClosedQuestion)) {
       final ClosedQuestion closedQuestion = ((ClosedQuestion) context);
-      InputOutput.<String>println("CLOSED QUESTION");
       EList<Answer> _answers = closedQuestion.getAnswers();
       return Scopes.scopeFor(_answers);
+    }
+    if ((context instanceof Answer)) {
+      final Answer answer = ((Answer) context);
+      EObject _eContainer = answer.eContainer();
+      EObject _eContainer_1 = _eContainer.eContainer();
+      final EList<Question> questions = ((Group) _eContainer_1).getQuestions();
+      EObject _eContainer_2 = answer.eContainer();
+      final EObject parentGroup = _eContainer_2.eContainer();
+      EObject _eContainer_3 = answer.eContainer();
+      EObject _eContainer_4 = _eContainer_3.eContainer();
+      EObject _eContainer_5 = _eContainer_4.eContainer();
+      Questionnaire root = ((Questionnaire) _eContainer_5);
+      EList<Group> _groups = root.getGroups();
+      final Procedure2<Group,Integer> _function = new Procedure2<Group,Integer>() {
+        public void apply(final Group element, final Integer index) {
+          boolean _equals = element.equals(parentGroup);
+          boolean _not = (!_equals);
+          if (_not) {
+            EList<Question> _questions = ((Group) element).getQuestions();
+            Iterables.<Question>addAll(questions, _questions);
+          }
+        }
+      };
+      IterableExtensions.<Group>forEach(_groups, _function);
+      return Scopes.scopeFor(questions);
     }
     return super.getScope(context, reference);
   }
