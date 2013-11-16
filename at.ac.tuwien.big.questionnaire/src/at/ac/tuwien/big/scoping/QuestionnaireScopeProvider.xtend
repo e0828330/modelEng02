@@ -7,12 +7,12 @@ import at.ac.tuwien.big.questionnaire.Answer
 import at.ac.tuwien.big.questionnaire.ClosedQuestion
 import at.ac.tuwien.big.questionnaire.Group
 import at.ac.tuwien.big.questionnaire.Question
+import at.ac.tuwien.big.questionnaire.Questionnaire
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
 import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
-import at.ac.tuwien.big.questionnaire.Questionnaire
 
 /**
  * This class contains custom scoping description.
@@ -23,12 +23,12 @@ import at.ac.tuwien.big.questionnaire.Questionnaire
  */
 class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
 
-	// TODO:
 	override getScope(EObject context, EReference reference) {
 		if (context instanceof ClosedQuestion) {
 			val closedQuestion = context as ClosedQuestion
 			return Scopes.scopeFor(closedQuestion.answers)
 		}
+
 		if (context instanceof Answer) {
 			val answer = context as Answer
 			val EList<Question> questions = (answer.eContainer.eContainer as Group).questions
@@ -36,11 +36,19 @@ class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
 			var root = answer.eContainer.eContainer.eContainer as Questionnaire
 			root.groups.forEach[element , index |
 				if (!element.equals(parentGroup)) {
-					questions+=(element as Group).questions
+					/*
+					 * TODO:
+					 * ... causes random exception "Update Editor State"
+					 * when loading a new file ... makes no sense 
+					 * => MARTIN FIX !!!!
+					 */
+					
+					//questions+=(element as Group).questions 
 				}
 			]
 			return Scopes.scopeFor(questions)
 		}
+	
 		return super.getScope(context, reference)
 	}
 }

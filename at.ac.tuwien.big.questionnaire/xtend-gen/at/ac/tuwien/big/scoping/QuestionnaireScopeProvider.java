@@ -8,7 +8,6 @@ import at.ac.tuwien.big.questionnaire.ClosedQuestion;
 import at.ac.tuwien.big.questionnaire.Group;
 import at.ac.tuwien.big.questionnaire.Question;
 import at.ac.tuwien.big.questionnaire.Questionnaire;
-import com.google.common.collect.Iterables;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
@@ -49,8 +48,6 @@ public class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider
           boolean _equals = element.equals(parentGroup);
           boolean _not = (!_equals);
           if (_not) {
-            EList<Question> _questions = ((Group) element).getQuestions();
-            Iterables.<Question>addAll(questions, _questions);
           }
         }
       };
