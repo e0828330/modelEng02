@@ -34,19 +34,17 @@ class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
 			val EList<Question> questions = (answer.eContainer.eContainer as Group).questions
 			val parentGroup = answer.eContainer.eContainer
 			var root = answer.eContainer.eContainer.eContainer as Questionnaire
-			root.groups.forEach[element , index |
-				if (!element.equals(parentGroup)) {
-					/*
-					 * TODO:
-					 * ... causes random exception "Update Editor State"
-					 * when loading a new file ... makes no sense 
-					 * => MARTIN FIX !!!!
-					 */
-					
-					//questions+=(element as Group).questions 
+
+			var scope = Scopes.scopeFor(questions)
+
+			for(Integer i: 0..(root.groups.size - 1)) {
+				val element = root.groups.get(i)
+				if (!element.equals(parentGroup)) {				
+					scope = Scopes.scopeFor((element as Group).questions, scope)
 				}
-			]
-			return Scopes.scopeFor(questions)
+			}
+			
+			return scope
 		}
 	
 		return super.getScope(context, reference)

@@ -14,8 +14,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
-import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.eclipse.xtext.xbase.lib.Procedures.Procedure2;
+import org.eclipse.xtext.xbase.lib.IntegerRange;
 
 /**
  * This class contains custom scoping description.
@@ -42,17 +41,25 @@ public class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider
       EObject _eContainer_4 = _eContainer_3.eContainer();
       EObject _eContainer_5 = _eContainer_4.eContainer();
       Questionnaire root = ((Questionnaire) _eContainer_5);
+      IScope scope = Scopes.scopeFor(questions);
       EList<Group> _groups = root.getGroups();
-      final Procedure2<Group,Integer> _function = new Procedure2<Group,Integer>() {
-        public void apply(final Group element, final Integer index) {
+      int _size = _groups.size();
+      int _minus = (_size - 1);
+      IntegerRange _upTo = new IntegerRange(0, _minus);
+      for (final Integer i : _upTo) {
+        {
+          EList<Group> _groups_1 = root.getGroups();
+          final Group element = _groups_1.get((i).intValue());
           boolean _equals = element.equals(parentGroup);
           boolean _not = (!_equals);
           if (_not) {
+            EList<Question> _questions = ((Group) element).getQuestions();
+            IScope _scopeFor = Scopes.scopeFor(_questions, scope);
+            scope = _scopeFor;
           }
         }
-      };
-      IterableExtensions.<Group>forEach(_groups, _function);
-      return Scopes.scopeFor(questions);
+      }
+      return scope;
     }
     return super.getScope(context, reference);
   }
