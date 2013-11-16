@@ -583,31 +583,31 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "ruleAnswer"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:237:1: ruleAnswer : ( ( rule__Answer__Alternatives ) ) ;
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:237:1: ruleAnswer : ( ( rule__Answer__Group__0 ) ) ;
     public final void ruleAnswer() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:241:2: ( ( ( rule__Answer__Alternatives ) ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:242:1: ( ( rule__Answer__Alternatives ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:241:2: ( ( ( rule__Answer__Group__0 ) ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:242:1: ( ( rule__Answer__Group__0 ) )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:242:1: ( ( rule__Answer__Alternatives ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:243:1: ( rule__Answer__Alternatives )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:242:1: ( ( rule__Answer__Group__0 ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:243:1: ( rule__Answer__Group__0 )
             {
-             before(grammarAccess.getAnswerAccess().getAlternatives()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:244:1: ( rule__Answer__Alternatives )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:244:2: rule__Answer__Alternatives
+             before(grammarAccess.getAnswerAccess().getGroup()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:244:1: ( rule__Answer__Group__0 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:244:2: rule__Answer__Group__0
             {
-            pushFollow(FOLLOW_rule__Answer__Alternatives_in_ruleAnswer454);
-            rule__Answer__Alternatives();
+            pushFollow(FOLLOW_rule__Answer__Group__0_in_ruleAnswer454);
+            rule__Answer__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getAnswerAccess().getAlternatives()); 
+             after(grammarAccess.getAnswerAccess().getGroup()); 
 
             }
 
@@ -660,31 +660,31 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
 
 
     // $ANTLR start "ruleSimpleAnswer"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:265:1: ruleSimpleAnswer : ( ( rule__SimpleAnswer__Group__0 ) ) ;
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:265:1: ruleSimpleAnswer : ( ( rule__SimpleAnswer__NameAssignment ) ) ;
     public final void ruleSimpleAnswer() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:269:2: ( ( ( rule__SimpleAnswer__Group__0 ) ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:270:1: ( ( rule__SimpleAnswer__Group__0 ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:269:2: ( ( ( rule__SimpleAnswer__NameAssignment ) ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:270:1: ( ( rule__SimpleAnswer__NameAssignment ) )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:270:1: ( ( rule__SimpleAnswer__Group__0 ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:271:1: ( rule__SimpleAnswer__Group__0 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:270:1: ( ( rule__SimpleAnswer__NameAssignment ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:271:1: ( rule__SimpleAnswer__NameAssignment )
             {
-             before(grammarAccess.getSimpleAnswerAccess().getGroup()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:272:1: ( rule__SimpleAnswer__Group__0 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:272:2: rule__SimpleAnswer__Group__0
+             before(grammarAccess.getSimpleAnswerAccess().getNameAssignment()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:272:1: ( rule__SimpleAnswer__NameAssignment )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:272:2: rule__SimpleAnswer__NameAssignment
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group__0_in_ruleSimpleAnswer514);
-            rule__SimpleAnswer__Group__0();
+            pushFollow(FOLLOW_rule__SimpleAnswer__NameAssignment_in_ruleSimpleAnswer514);
+            rule__SimpleAnswer__NameAssignment();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSimpleAnswerAccess().getGroup()); 
+             after(grammarAccess.getSimpleAnswerAccess().getNameAssignment()); 
 
             }
 
@@ -1111,9 +1111,9 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__ClosedQuestion__Alternatives_1"
 
 
-    // $ANTLR start "rule__Answer__Alternatives"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:420:1: rule__Answer__Alternatives : ( ( ruleSimpleAnswer ) | ( ruleInputAnswer ) );
-    public final void rule__Answer__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Alternatives_0"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:420:1: rule__Answer__Alternatives_0 : ( ( ruleSimpleAnswer ) | ( ruleInputAnswer ) );
+    public final void rule__Answer__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -1151,13 +1151,13 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
                     // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:425:1: ( ruleSimpleAnswer )
                     // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:426:1: ruleSimpleAnswer
                     {
-                     before(grammarAccess.getAnswerAccess().getSimpleAnswerParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleSimpleAnswer_in_rule__Answer__Alternatives846);
+                     before(grammarAccess.getAnswerAccess().getSimpleAnswerParserRuleCall_0_0()); 
+                    pushFollow(FOLLOW_ruleSimpleAnswer_in_rule__Answer__Alternatives_0846);
                     ruleSimpleAnswer();
 
                     state._fsp--;
 
-                     after(grammarAccess.getAnswerAccess().getSimpleAnswerParserRuleCall_0()); 
+                     after(grammarAccess.getAnswerAccess().getSimpleAnswerParserRuleCall_0_0()); 
 
                     }
 
@@ -1170,13 +1170,13 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
                     // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:431:6: ( ruleInputAnswer )
                     // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:432:1: ruleInputAnswer
                     {
-                     before(grammarAccess.getAnswerAccess().getInputAnswerParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleInputAnswer_in_rule__Answer__Alternatives863);
+                     before(grammarAccess.getAnswerAccess().getInputAnswerParserRuleCall_0_1()); 
+                    pushFollow(FOLLOW_ruleInputAnswer_in_rule__Answer__Alternatives_0863);
                     ruleInputAnswer();
 
                     state._fsp--;
 
-                     after(grammarAccess.getAnswerAccess().getInputAnswerParserRuleCall_1()); 
+                     after(grammarAccess.getAnswerAccess().getInputAnswerParserRuleCall_0_1()); 
 
                     }
 
@@ -1197,7 +1197,7 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__Answer__Alternatives"
+    // $ANTLR end "rule__Answer__Alternatives_0"
 
 
     // $ANTLR start "rule__Questionnaire__Group__0"
@@ -4356,103 +4356,23 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__LikertQuestion__Group__6__Impl"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group__0"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1682:1: rule__SimpleAnswer__Group__0 : rule__SimpleAnswer__Group__0__Impl rule__SimpleAnswer__Group__1 ;
-    public final void rule__SimpleAnswer__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group__0"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1682:1: rule__Answer__Group__0 : rule__Answer__Group__0__Impl rule__Answer__Group__1 ;
+    public final void rule__Answer__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1686:1: ( rule__SimpleAnswer__Group__0__Impl rule__SimpleAnswer__Group__1 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1687:2: rule__SimpleAnswer__Group__0__Impl rule__SimpleAnswer__Group__1
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1686:1: ( rule__Answer__Group__0__Impl rule__Answer__Group__1 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1687:2: rule__Answer__Group__0__Impl rule__Answer__Group__1
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group__0__Impl_in_rule__SimpleAnswer__Group__03327);
-            rule__SimpleAnswer__Group__0__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group__0__Impl_in_rule__Answer__Group__03327);
+            rule__Answer__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group__1_in_rule__SimpleAnswer__Group__03330);
-            rule__SimpleAnswer__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleAnswer__Group__0"
-
-
-    // $ANTLR start "rule__SimpleAnswer__Group__0__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1694:1: rule__SimpleAnswer__Group__0__Impl : ( ( rule__SimpleAnswer__NameAssignment_0 ) ) ;
-    public final void rule__SimpleAnswer__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1698:1: ( ( ( rule__SimpleAnswer__NameAssignment_0 ) ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1699:1: ( ( rule__SimpleAnswer__NameAssignment_0 ) )
-            {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1699:1: ( ( rule__SimpleAnswer__NameAssignment_0 ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1700:1: ( rule__SimpleAnswer__NameAssignment_0 )
-            {
-             before(grammarAccess.getSimpleAnswerAccess().getNameAssignment_0()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1701:1: ( rule__SimpleAnswer__NameAssignment_0 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1701:2: rule__SimpleAnswer__NameAssignment_0
-            {
-            pushFollow(FOLLOW_rule__SimpleAnswer__NameAssignment_0_in_rule__SimpleAnswer__Group__0__Impl3357);
-            rule__SimpleAnswer__NameAssignment_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getSimpleAnswerAccess().getNameAssignment_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__SimpleAnswer__Group__0__Impl"
-
-
-    // $ANTLR start "rule__SimpleAnswer__Group__1"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1711:1: rule__SimpleAnswer__Group__1 : rule__SimpleAnswer__Group__1__Impl ;
-    public final void rule__SimpleAnswer__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1715:1: ( rule__SimpleAnswer__Group__1__Impl )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1716:2: rule__SimpleAnswer__Group__1__Impl
-            {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group__1__Impl_in_rule__SimpleAnswer__Group__13387);
-            rule__SimpleAnswer__Group__1__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group__1_in_rule__Answer__Group__03330);
+            rule__Answer__Group__1();
 
             state._fsp--;
 
@@ -4471,24 +4391,104 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group__1"
+    // $ANTLR end "rule__Answer__Group__0"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group__1__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1722:1: rule__SimpleAnswer__Group__1__Impl : ( ( rule__SimpleAnswer__Group_1__0 )? ) ;
-    public final void rule__SimpleAnswer__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group__0__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1694:1: rule__Answer__Group__0__Impl : ( ( rule__Answer__Alternatives_0 ) ) ;
+    public final void rule__Answer__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1726:1: ( ( ( rule__SimpleAnswer__Group_1__0 )? ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1727:1: ( ( rule__SimpleAnswer__Group_1__0 )? )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1698:1: ( ( ( rule__Answer__Alternatives_0 ) ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1699:1: ( ( rule__Answer__Alternatives_0 ) )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1727:1: ( ( rule__SimpleAnswer__Group_1__0 )? )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1728:1: ( rule__SimpleAnswer__Group_1__0 )?
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1699:1: ( ( rule__Answer__Alternatives_0 ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1700:1: ( rule__Answer__Alternatives_0 )
             {
-             before(grammarAccess.getSimpleAnswerAccess().getGroup_1()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1729:1: ( rule__SimpleAnswer__Group_1__0 )?
+             before(grammarAccess.getAnswerAccess().getAlternatives_0()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1701:1: ( rule__Answer__Alternatives_0 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1701:2: rule__Answer__Alternatives_0
+            {
+            pushFollow(FOLLOW_rule__Answer__Alternatives_0_in_rule__Answer__Group__0__Impl3357);
+            rule__Answer__Alternatives_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAnswerAccess().getAlternatives_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Answer__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Answer__Group__1"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1711:1: rule__Answer__Group__1 : rule__Answer__Group__1__Impl ;
+    public final void rule__Answer__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1715:1: ( rule__Answer__Group__1__Impl )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1716:2: rule__Answer__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Answer__Group__1__Impl_in_rule__Answer__Group__13387);
+            rule__Answer__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Answer__Group__1"
+
+
+    // $ANTLR start "rule__Answer__Group__1__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1722:1: rule__Answer__Group__1__Impl : ( ( rule__Answer__Group_1__0 )? ) ;
+    public final void rule__Answer__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1726:1: ( ( ( rule__Answer__Group_1__0 )? ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1727:1: ( ( rule__Answer__Group_1__0 )? )
+            {
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1727:1: ( ( rule__Answer__Group_1__0 )? )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1728:1: ( rule__Answer__Group_1__0 )?
+            {
+             before(grammarAccess.getAnswerAccess().getGroup_1()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1729:1: ( rule__Answer__Group_1__0 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -4497,10 +4497,10 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
             }
             switch (alt10) {
                 case 1 :
-                    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1729:2: rule__SimpleAnswer__Group_1__0
+                    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1729:2: rule__Answer__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__0_in_rule__SimpleAnswer__Group__1__Impl3414);
-                    rule__SimpleAnswer__Group_1__0();
+                    pushFollow(FOLLOW_rule__Answer__Group_1__0_in_rule__Answer__Group__1__Impl3414);
+                    rule__Answer__Group_1__0();
 
                     state._fsp--;
 
@@ -4510,7 +4510,7 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
 
             }
 
-             after(grammarAccess.getSimpleAnswerAccess().getGroup_1()); 
+             after(grammarAccess.getAnswerAccess().getGroup_1()); 
 
             }
 
@@ -4529,26 +4529,26 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group__1__Impl"
+    // $ANTLR end "rule__Answer__Group__1__Impl"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__0"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1743:1: rule__SimpleAnswer__Group_1__0 : rule__SimpleAnswer__Group_1__0__Impl rule__SimpleAnswer__Group_1__1 ;
-    public final void rule__SimpleAnswer__Group_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__0"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1743:1: rule__Answer__Group_1__0 : rule__Answer__Group_1__0__Impl rule__Answer__Group_1__1 ;
+    public final void rule__Answer__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1747:1: ( rule__SimpleAnswer__Group_1__0__Impl rule__SimpleAnswer__Group_1__1 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1748:2: rule__SimpleAnswer__Group_1__0__Impl rule__SimpleAnswer__Group_1__1
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1747:1: ( rule__Answer__Group_1__0__Impl rule__Answer__Group_1__1 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1748:2: rule__Answer__Group_1__0__Impl rule__Answer__Group_1__1
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__0__Impl_in_rule__SimpleAnswer__Group_1__03449);
-            rule__SimpleAnswer__Group_1__0__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group_1__0__Impl_in_rule__Answer__Group_1__03449);
+            rule__Answer__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__1_in_rule__SimpleAnswer__Group_1__03452);
-            rule__SimpleAnswer__Group_1__1();
+            pushFollow(FOLLOW_rule__Answer__Group_1__1_in_rule__Answer__Group_1__03452);
+            rule__Answer__Group_1__1();
 
             state._fsp--;
 
@@ -4567,12 +4567,12 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__0"
+    // $ANTLR end "rule__Answer__Group_1__0"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__0__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1755:1: rule__SimpleAnswer__Group_1__0__Impl : ( 'enables question' ) ;
-    public final void rule__SimpleAnswer__Group_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__0__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1755:1: rule__Answer__Group_1__0__Impl : ( 'enables question' ) ;
+    public final void rule__Answer__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -4583,9 +4583,9 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
             // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1760:1: ( 'enables question' )
             // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1761:1: 'enables question'
             {
-             before(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionKeyword_1_0()); 
-            match(input,28,FOLLOW_28_in_rule__SimpleAnswer__Group_1__0__Impl3480); 
-             after(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionKeyword_1_0()); 
+             before(grammarAccess.getAnswerAccess().getEnablesQuestionKeyword_1_0()); 
+            match(input,28,FOLLOW_28_in_rule__Answer__Group_1__0__Impl3480); 
+             after(grammarAccess.getAnswerAccess().getEnablesQuestionKeyword_1_0()); 
 
             }
 
@@ -4604,26 +4604,26 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__0__Impl"
+    // $ANTLR end "rule__Answer__Group_1__0__Impl"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__1"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1774:1: rule__SimpleAnswer__Group_1__1 : rule__SimpleAnswer__Group_1__1__Impl rule__SimpleAnswer__Group_1__2 ;
-    public final void rule__SimpleAnswer__Group_1__1() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__1"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1774:1: rule__Answer__Group_1__1 : rule__Answer__Group_1__1__Impl rule__Answer__Group_1__2 ;
+    public final void rule__Answer__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1778:1: ( rule__SimpleAnswer__Group_1__1__Impl rule__SimpleAnswer__Group_1__2 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1779:2: rule__SimpleAnswer__Group_1__1__Impl rule__SimpleAnswer__Group_1__2
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1778:1: ( rule__Answer__Group_1__1__Impl rule__Answer__Group_1__2 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1779:2: rule__Answer__Group_1__1__Impl rule__Answer__Group_1__2
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__1__Impl_in_rule__SimpleAnswer__Group_1__13511);
-            rule__SimpleAnswer__Group_1__1__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group_1__1__Impl_in_rule__Answer__Group_1__13511);
+            rule__Answer__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__2_in_rule__SimpleAnswer__Group_1__13514);
-            rule__SimpleAnswer__Group_1__2();
+            pushFollow(FOLLOW_rule__Answer__Group_1__2_in_rule__Answer__Group_1__13514);
+            rule__Answer__Group_1__2();
 
             state._fsp--;
 
@@ -4642,12 +4642,12 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__1"
+    // $ANTLR end "rule__Answer__Group_1__1"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__1__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1786:1: rule__SimpleAnswer__Group_1__1__Impl : ( '[' ) ;
-    public final void rule__SimpleAnswer__Group_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__1__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1786:1: rule__Answer__Group_1__1__Impl : ( '[' ) ;
+    public final void rule__Answer__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -4658,9 +4658,9 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
             // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1791:1: ( '[' )
             // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1792:1: '['
             {
-             before(grammarAccess.getSimpleAnswerAccess().getLeftSquareBracketKeyword_1_1()); 
-            match(input,16,FOLLOW_16_in_rule__SimpleAnswer__Group_1__1__Impl3542); 
-             after(grammarAccess.getSimpleAnswerAccess().getLeftSquareBracketKeyword_1_1()); 
+             before(grammarAccess.getAnswerAccess().getLeftSquareBracketKeyword_1_1()); 
+            match(input,16,FOLLOW_16_in_rule__Answer__Group_1__1__Impl3542); 
+             after(grammarAccess.getAnswerAccess().getLeftSquareBracketKeyword_1_1()); 
 
             }
 
@@ -4679,26 +4679,26 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__1__Impl"
+    // $ANTLR end "rule__Answer__Group_1__1__Impl"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__2"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1805:1: rule__SimpleAnswer__Group_1__2 : rule__SimpleAnswer__Group_1__2__Impl rule__SimpleAnswer__Group_1__3 ;
-    public final void rule__SimpleAnswer__Group_1__2() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__2"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1805:1: rule__Answer__Group_1__2 : rule__Answer__Group_1__2__Impl rule__Answer__Group_1__3 ;
+    public final void rule__Answer__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1809:1: ( rule__SimpleAnswer__Group_1__2__Impl rule__SimpleAnswer__Group_1__3 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1810:2: rule__SimpleAnswer__Group_1__2__Impl rule__SimpleAnswer__Group_1__3
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1809:1: ( rule__Answer__Group_1__2__Impl rule__Answer__Group_1__3 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1810:2: rule__Answer__Group_1__2__Impl rule__Answer__Group_1__3
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__2__Impl_in_rule__SimpleAnswer__Group_1__23573);
-            rule__SimpleAnswer__Group_1__2__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group_1__2__Impl_in_rule__Answer__Group_1__23573);
+            rule__Answer__Group_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__3_in_rule__SimpleAnswer__Group_1__23576);
-            rule__SimpleAnswer__Group_1__3();
+            pushFollow(FOLLOW_rule__Answer__Group_1__3_in_rule__Answer__Group_1__23576);
+            rule__Answer__Group_1__3();
 
             state._fsp--;
 
@@ -4717,35 +4717,35 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__2"
+    // $ANTLR end "rule__Answer__Group_1__2"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__2__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1817:1: rule__SimpleAnswer__Group_1__2__Impl : ( ( rule__SimpleAnswer__EnablesAssignment_1_2 ) ) ;
-    public final void rule__SimpleAnswer__Group_1__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__2__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1817:1: rule__Answer__Group_1__2__Impl : ( ( rule__Answer__EnablesAssignment_1_2 ) ) ;
+    public final void rule__Answer__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1821:1: ( ( ( rule__SimpleAnswer__EnablesAssignment_1_2 ) ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1822:1: ( ( rule__SimpleAnswer__EnablesAssignment_1_2 ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1821:1: ( ( ( rule__Answer__EnablesAssignment_1_2 ) ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1822:1: ( ( rule__Answer__EnablesAssignment_1_2 ) )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1822:1: ( ( rule__SimpleAnswer__EnablesAssignment_1_2 ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1823:1: ( rule__SimpleAnswer__EnablesAssignment_1_2 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1822:1: ( ( rule__Answer__EnablesAssignment_1_2 ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1823:1: ( rule__Answer__EnablesAssignment_1_2 )
             {
-             before(grammarAccess.getSimpleAnswerAccess().getEnablesAssignment_1_2()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1824:1: ( rule__SimpleAnswer__EnablesAssignment_1_2 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1824:2: rule__SimpleAnswer__EnablesAssignment_1_2
+             before(grammarAccess.getAnswerAccess().getEnablesAssignment_1_2()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1824:1: ( rule__Answer__EnablesAssignment_1_2 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1824:2: rule__Answer__EnablesAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__EnablesAssignment_1_2_in_rule__SimpleAnswer__Group_1__2__Impl3603);
-            rule__SimpleAnswer__EnablesAssignment_1_2();
+            pushFollow(FOLLOW_rule__Answer__EnablesAssignment_1_2_in_rule__Answer__Group_1__2__Impl3603);
+            rule__Answer__EnablesAssignment_1_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSimpleAnswerAccess().getEnablesAssignment_1_2()); 
+             after(grammarAccess.getAnswerAccess().getEnablesAssignment_1_2()); 
 
             }
 
@@ -4764,26 +4764,26 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__2__Impl"
+    // $ANTLR end "rule__Answer__Group_1__2__Impl"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__3"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1834:1: rule__SimpleAnswer__Group_1__3 : rule__SimpleAnswer__Group_1__3__Impl rule__SimpleAnswer__Group_1__4 ;
-    public final void rule__SimpleAnswer__Group_1__3() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__3"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1834:1: rule__Answer__Group_1__3 : rule__Answer__Group_1__3__Impl rule__Answer__Group_1__4 ;
+    public final void rule__Answer__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1838:1: ( rule__SimpleAnswer__Group_1__3__Impl rule__SimpleAnswer__Group_1__4 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1839:2: rule__SimpleAnswer__Group_1__3__Impl rule__SimpleAnswer__Group_1__4
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1838:1: ( rule__Answer__Group_1__3__Impl rule__Answer__Group_1__4 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1839:2: rule__Answer__Group_1__3__Impl rule__Answer__Group_1__4
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__3__Impl_in_rule__SimpleAnswer__Group_1__33633);
-            rule__SimpleAnswer__Group_1__3__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group_1__3__Impl_in_rule__Answer__Group_1__33633);
+            rule__Answer__Group_1__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__4_in_rule__SimpleAnswer__Group_1__33636);
-            rule__SimpleAnswer__Group_1__4();
+            pushFollow(FOLLOW_rule__Answer__Group_1__4_in_rule__Answer__Group_1__33636);
+            rule__Answer__Group_1__4();
 
             state._fsp--;
 
@@ -4802,24 +4802,24 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__3"
+    // $ANTLR end "rule__Answer__Group_1__3"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__3__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1846:1: rule__SimpleAnswer__Group_1__3__Impl : ( ( rule__SimpleAnswer__Group_1_3__0 )* ) ;
-    public final void rule__SimpleAnswer__Group_1__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__3__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1846:1: rule__Answer__Group_1__3__Impl : ( ( rule__Answer__Group_1_3__0 )* ) ;
+    public final void rule__Answer__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1850:1: ( ( ( rule__SimpleAnswer__Group_1_3__0 )* ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1851:1: ( ( rule__SimpleAnswer__Group_1_3__0 )* )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1850:1: ( ( ( rule__Answer__Group_1_3__0 )* ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1851:1: ( ( rule__Answer__Group_1_3__0 )* )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1851:1: ( ( rule__SimpleAnswer__Group_1_3__0 )* )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1852:1: ( rule__SimpleAnswer__Group_1_3__0 )*
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1851:1: ( ( rule__Answer__Group_1_3__0 )* )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1852:1: ( rule__Answer__Group_1_3__0 )*
             {
-             before(grammarAccess.getSimpleAnswerAccess().getGroup_1_3()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1853:1: ( rule__SimpleAnswer__Group_1_3__0 )*
+             before(grammarAccess.getAnswerAccess().getGroup_1_3()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1853:1: ( rule__Answer__Group_1_3__0 )*
             loop11:
             do {
                 int alt11=2;
@@ -4832,10 +4832,10 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
 
                 switch (alt11) {
             	case 1 :
-            	    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1853:2: rule__SimpleAnswer__Group_1_3__0
+            	    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1853:2: rule__Answer__Group_1_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__SimpleAnswer__Group_1_3__0_in_rule__SimpleAnswer__Group_1__3__Impl3663);
-            	    rule__SimpleAnswer__Group_1_3__0();
+            	    pushFollow(FOLLOW_rule__Answer__Group_1_3__0_in_rule__Answer__Group_1__3__Impl3663);
+            	    rule__Answer__Group_1_3__0();
 
             	    state._fsp--;
 
@@ -4848,7 +4848,7 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
                 }
             } while (true);
 
-             after(grammarAccess.getSimpleAnswerAccess().getGroup_1_3()); 
+             after(grammarAccess.getAnswerAccess().getGroup_1_3()); 
 
             }
 
@@ -4867,21 +4867,21 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__3__Impl"
+    // $ANTLR end "rule__Answer__Group_1__3__Impl"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__4"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1863:1: rule__SimpleAnswer__Group_1__4 : rule__SimpleAnswer__Group_1__4__Impl ;
-    public final void rule__SimpleAnswer__Group_1__4() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__4"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1863:1: rule__Answer__Group_1__4 : rule__Answer__Group_1__4__Impl ;
+    public final void rule__Answer__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1867:1: ( rule__SimpleAnswer__Group_1__4__Impl )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1868:2: rule__SimpleAnswer__Group_1__4__Impl
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1867:1: ( rule__Answer__Group_1__4__Impl )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1868:2: rule__Answer__Group_1__4__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1__4__Impl_in_rule__SimpleAnswer__Group_1__43694);
-            rule__SimpleAnswer__Group_1__4__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group_1__4__Impl_in_rule__Answer__Group_1__43694);
+            rule__Answer__Group_1__4__Impl();
 
             state._fsp--;
 
@@ -4900,12 +4900,12 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__4"
+    // $ANTLR end "rule__Answer__Group_1__4"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1__4__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1874:1: rule__SimpleAnswer__Group_1__4__Impl : ( ']' ) ;
-    public final void rule__SimpleAnswer__Group_1__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1__4__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1874:1: rule__Answer__Group_1__4__Impl : ( ']' ) ;
+    public final void rule__Answer__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -4916,9 +4916,9 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
             // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1879:1: ( ']' )
             // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1880:1: ']'
             {
-             before(grammarAccess.getSimpleAnswerAccess().getRightSquareBracketKeyword_1_4()); 
-            match(input,17,FOLLOW_17_in_rule__SimpleAnswer__Group_1__4__Impl3722); 
-             after(grammarAccess.getSimpleAnswerAccess().getRightSquareBracketKeyword_1_4()); 
+             before(grammarAccess.getAnswerAccess().getRightSquareBracketKeyword_1_4()); 
+            match(input,17,FOLLOW_17_in_rule__Answer__Group_1__4__Impl3722); 
+             after(grammarAccess.getAnswerAccess().getRightSquareBracketKeyword_1_4()); 
 
             }
 
@@ -4937,26 +4937,26 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1__4__Impl"
+    // $ANTLR end "rule__Answer__Group_1__4__Impl"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1_3__0"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1903:1: rule__SimpleAnswer__Group_1_3__0 : rule__SimpleAnswer__Group_1_3__0__Impl rule__SimpleAnswer__Group_1_3__1 ;
-    public final void rule__SimpleAnswer__Group_1_3__0() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1_3__0"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1903:1: rule__Answer__Group_1_3__0 : rule__Answer__Group_1_3__0__Impl rule__Answer__Group_1_3__1 ;
+    public final void rule__Answer__Group_1_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1907:1: ( rule__SimpleAnswer__Group_1_3__0__Impl rule__SimpleAnswer__Group_1_3__1 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1908:2: rule__SimpleAnswer__Group_1_3__0__Impl rule__SimpleAnswer__Group_1_3__1
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1907:1: ( rule__Answer__Group_1_3__0__Impl rule__Answer__Group_1_3__1 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1908:2: rule__Answer__Group_1_3__0__Impl rule__Answer__Group_1_3__1
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1_3__0__Impl_in_rule__SimpleAnswer__Group_1_3__03763);
-            rule__SimpleAnswer__Group_1_3__0__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group_1_3__0__Impl_in_rule__Answer__Group_1_3__03763);
+            rule__Answer__Group_1_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1_3__1_in_rule__SimpleAnswer__Group_1_3__03766);
-            rule__SimpleAnswer__Group_1_3__1();
+            pushFollow(FOLLOW_rule__Answer__Group_1_3__1_in_rule__Answer__Group_1_3__03766);
+            rule__Answer__Group_1_3__1();
 
             state._fsp--;
 
@@ -4975,12 +4975,12 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1_3__0"
+    // $ANTLR end "rule__Answer__Group_1_3__0"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1_3__0__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1915:1: rule__SimpleAnswer__Group_1_3__0__Impl : ( ',' ) ;
-    public final void rule__SimpleAnswer__Group_1_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1_3__0__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1915:1: rule__Answer__Group_1_3__0__Impl : ( ',' ) ;
+    public final void rule__Answer__Group_1_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -4991,9 +4991,9 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
             // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1920:1: ( ',' )
             // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1921:1: ','
             {
-             before(grammarAccess.getSimpleAnswerAccess().getCommaKeyword_1_3_0()); 
-            match(input,18,FOLLOW_18_in_rule__SimpleAnswer__Group_1_3__0__Impl3794); 
-             after(grammarAccess.getSimpleAnswerAccess().getCommaKeyword_1_3_0()); 
+             before(grammarAccess.getAnswerAccess().getCommaKeyword_1_3_0()); 
+            match(input,18,FOLLOW_18_in_rule__Answer__Group_1_3__0__Impl3794); 
+             after(grammarAccess.getAnswerAccess().getCommaKeyword_1_3_0()); 
 
             }
 
@@ -5012,21 +5012,21 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1_3__0__Impl"
+    // $ANTLR end "rule__Answer__Group_1_3__0__Impl"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1_3__1"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1934:1: rule__SimpleAnswer__Group_1_3__1 : rule__SimpleAnswer__Group_1_3__1__Impl ;
-    public final void rule__SimpleAnswer__Group_1_3__1() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1_3__1"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1934:1: rule__Answer__Group_1_3__1 : rule__Answer__Group_1_3__1__Impl ;
+    public final void rule__Answer__Group_1_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1938:1: ( rule__SimpleAnswer__Group_1_3__1__Impl )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1939:2: rule__SimpleAnswer__Group_1_3__1__Impl
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1938:1: ( rule__Answer__Group_1_3__1__Impl )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1939:2: rule__Answer__Group_1_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__Group_1_3__1__Impl_in_rule__SimpleAnswer__Group_1_3__13825);
-            rule__SimpleAnswer__Group_1_3__1__Impl();
+            pushFollow(FOLLOW_rule__Answer__Group_1_3__1__Impl_in_rule__Answer__Group_1_3__13825);
+            rule__Answer__Group_1_3__1__Impl();
 
             state._fsp--;
 
@@ -5045,35 +5045,35 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1_3__1"
+    // $ANTLR end "rule__Answer__Group_1_3__1"
 
 
-    // $ANTLR start "rule__SimpleAnswer__Group_1_3__1__Impl"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1945:1: rule__SimpleAnswer__Group_1_3__1__Impl : ( ( rule__SimpleAnswer__EnablesAssignment_1_3_1 ) ) ;
-    public final void rule__SimpleAnswer__Group_1_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Answer__Group_1_3__1__Impl"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1945:1: rule__Answer__Group_1_3__1__Impl : ( ( rule__Answer__EnablesAssignment_1_3_1 ) ) ;
+    public final void rule__Answer__Group_1_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1949:1: ( ( ( rule__SimpleAnswer__EnablesAssignment_1_3_1 ) ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1950:1: ( ( rule__SimpleAnswer__EnablesAssignment_1_3_1 ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1949:1: ( ( ( rule__Answer__EnablesAssignment_1_3_1 ) ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1950:1: ( ( rule__Answer__EnablesAssignment_1_3_1 ) )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1950:1: ( ( rule__SimpleAnswer__EnablesAssignment_1_3_1 ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1951:1: ( rule__SimpleAnswer__EnablesAssignment_1_3_1 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1950:1: ( ( rule__Answer__EnablesAssignment_1_3_1 ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1951:1: ( rule__Answer__EnablesAssignment_1_3_1 )
             {
-             before(grammarAccess.getSimpleAnswerAccess().getEnablesAssignment_1_3_1()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1952:1: ( rule__SimpleAnswer__EnablesAssignment_1_3_1 )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1952:2: rule__SimpleAnswer__EnablesAssignment_1_3_1
+             before(grammarAccess.getAnswerAccess().getEnablesAssignment_1_3_1()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1952:1: ( rule__Answer__EnablesAssignment_1_3_1 )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:1952:2: rule__Answer__EnablesAssignment_1_3_1
             {
-            pushFollow(FOLLOW_rule__SimpleAnswer__EnablesAssignment_1_3_1_in_rule__SimpleAnswer__Group_1_3__1__Impl3852);
-            rule__SimpleAnswer__EnablesAssignment_1_3_1();
+            pushFollow(FOLLOW_rule__Answer__EnablesAssignment_1_3_1_in_rule__Answer__Group_1_3__1__Impl3852);
+            rule__Answer__EnablesAssignment_1_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSimpleAnswerAccess().getEnablesAssignment_1_3_1()); 
+             after(grammarAccess.getAnswerAccess().getEnablesAssignment_1_3_1()); 
 
             }
 
@@ -5092,7 +5092,7 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__Group_1_3__1__Impl"
+    // $ANTLR end "rule__Answer__Group_1_3__1__Impl"
 
 
     // $ANTLR start "rule__InputAnswer__Group__0"
@@ -5970,22 +5970,30 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
     // $ANTLR end "rule__LikertQuestion__ToAssignment_5"
 
 
-    // $ANTLR start "rule__SimpleAnswer__NameAssignment_0"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2307:1: rule__SimpleAnswer__NameAssignment_0 : ( RULE_STRING ) ;
-    public final void rule__SimpleAnswer__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Answer__EnablesAssignment_1_2"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2307:1: rule__Answer__EnablesAssignment_1_2 : ( ( RULE_STRING ) ) ;
+    public final void rule__Answer__EnablesAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2311:1: ( ( RULE_STRING ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2312:1: ( RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2311:1: ( ( ( RULE_STRING ) ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2312:1: ( ( RULE_STRING ) )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2312:1: ( RULE_STRING )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2313:1: RULE_STRING
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2312:1: ( ( RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2313:1: ( RULE_STRING )
             {
-             before(grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleAnswer__NameAssignment_04581); 
-             after(grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0_0()); 
+             before(grammarAccess.getAnswerAccess().getEnablesQuestionCrossReference_1_2_0()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2314:1: ( RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2315:1: RULE_STRING
+            {
+             before(grammarAccess.getAnswerAccess().getEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Answer__EnablesAssignment_1_24585); 
+             after(grammarAccess.getAnswerAccess().getEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1()); 
+
+            }
+
+             after(grammarAccess.getAnswerAccess().getEnablesQuestionCrossReference_1_2_0()); 
 
             }
 
@@ -6004,33 +6012,33 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__NameAssignment_0"
+    // $ANTLR end "rule__Answer__EnablesAssignment_1_2"
 
 
-    // $ANTLR start "rule__SimpleAnswer__EnablesAssignment_1_2"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2322:1: rule__SimpleAnswer__EnablesAssignment_1_2 : ( ( RULE_STRING ) ) ;
-    public final void rule__SimpleAnswer__EnablesAssignment_1_2() throws RecognitionException {
+    // $ANTLR start "rule__Answer__EnablesAssignment_1_3_1"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2326:1: rule__Answer__EnablesAssignment_1_3_1 : ( ( RULE_STRING ) ) ;
+    public final void rule__Answer__EnablesAssignment_1_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2326:1: ( ( ( RULE_STRING ) ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2327:1: ( ( RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2330:1: ( ( ( RULE_STRING ) ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2331:1: ( ( RULE_STRING ) )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2327:1: ( ( RULE_STRING ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2328:1: ( RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2331:1: ( ( RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2332:1: ( RULE_STRING )
             {
-             before(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionCrossReference_1_2_0()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2329:1: ( RULE_STRING )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2330:1: RULE_STRING
+             before(grammarAccess.getAnswerAccess().getEnablesQuestionCrossReference_1_3_1_0()); 
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2333:1: ( RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2334:1: RULE_STRING
             {
-             before(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleAnswer__EnablesAssignment_1_24616); 
-             after(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1()); 
+             before(grammarAccess.getAnswerAccess().getEnablesQuestionSTRINGTerminalRuleCall_1_3_1_0_1()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Answer__EnablesAssignment_1_3_14624); 
+             after(grammarAccess.getAnswerAccess().getEnablesQuestionSTRINGTerminalRuleCall_1_3_1_0_1()); 
 
             }
 
-             after(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionCrossReference_1_2_0()); 
+             after(grammarAccess.getAnswerAccess().getEnablesQuestionCrossReference_1_3_1_0()); 
 
             }
 
@@ -6049,33 +6057,25 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__EnablesAssignment_1_2"
+    // $ANTLR end "rule__Answer__EnablesAssignment_1_3_1"
 
 
-    // $ANTLR start "rule__SimpleAnswer__EnablesAssignment_1_3_1"
-    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2341:1: rule__SimpleAnswer__EnablesAssignment_1_3_1 : ( ( RULE_STRING ) ) ;
-    public final void rule__SimpleAnswer__EnablesAssignment_1_3_1() throws RecognitionException {
+    // $ANTLR start "rule__SimpleAnswer__NameAssignment"
+    // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2345:1: rule__SimpleAnswer__NameAssignment : ( RULE_STRING ) ;
+    public final void rule__SimpleAnswer__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2345:1: ( ( ( RULE_STRING ) ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2346:1: ( ( RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2349:1: ( ( RULE_STRING ) )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2350:1: ( RULE_STRING )
             {
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2346:1: ( ( RULE_STRING ) )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2347:1: ( RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2350:1: ( RULE_STRING )
+            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2351:1: RULE_STRING
             {
-             before(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionCrossReference_1_3_1_0()); 
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2348:1: ( RULE_STRING )
-            // ../at.ac.tuwien.big.questionnaire.ui/src-gen/at/ac/tuwien/big/ui/contentassist/antlr/internal/InternalQuestionnaire.g:2349:1: RULE_STRING
-            {
-             before(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionSTRINGTerminalRuleCall_1_3_1_0_1()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleAnswer__EnablesAssignment_1_3_14655); 
-             after(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionSTRINGTerminalRuleCall_1_3_1_0_1()); 
-
-            }
-
-             after(grammarAccess.getSimpleAnswerAccess().getEnablesQuestionCrossReference_1_3_1_0()); 
+             before(grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleAnswer__NameAssignment4659); 
+             after(grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0()); 
 
             }
 
@@ -6094,7 +6094,7 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
         }
         return ;
     }
-    // $ANTLR end "rule__SimpleAnswer__EnablesAssignment_1_3_1"
+    // $ANTLR end "rule__SimpleAnswer__NameAssignment"
 
 
     // $ANTLR start "rule__InputAnswer__NameAssignment_0"
@@ -6158,10 +6158,10 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
     public static final BitSet FOLLOW_rule__LikertQuestion__Group__0_in_ruleLikertQuestion394 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAnswer_in_entryRuleAnswer421 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAnswer428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Answer__Alternatives_in_ruleAnswer454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group__0_in_ruleAnswer454 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSimpleAnswer_in_entryRuleSimpleAnswer481 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSimpleAnswer488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group__0_in_ruleSimpleAnswer514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleAnswer__NameAssignment_in_ruleSimpleAnswer514 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleInputAnswer_in_entryRuleInputAnswer541 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleInputAnswer548 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__InputAnswer__Group__0_in_ruleInputAnswer574 = new BitSet(new long[]{0x0000000000000002L});
@@ -6175,8 +6175,8 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
     public static final BitSet FOLLOW_12_in_rule__OpenQuestion__Alternatives_0757 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_13_in_rule__ClosedQuestion__Alternatives_1792 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_14_in_rule__ClosedQuestion__Alternatives_1812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleAnswer_in_rule__Answer__Alternatives846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInputAnswer_in_rule__Answer__Alternatives863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleAnswer_in_rule__Answer__Alternatives_0846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInputAnswer_in_rule__Answer__Alternatives_0863 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Questionnaire__Group__0__Impl_in_rule__Questionnaire__Group__0893 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_rule__Questionnaire__Group__1_in_rule__Questionnaire__Group__0896 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_15_in_rule__Questionnaire__Group__0__Impl924 = new BitSet(new long[]{0x0000000000000002L});
@@ -6285,30 +6285,30 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
     public static final BitSet FOLLOW_rule__LikertQuestion__ToAssignment_5_in_rule__LikertQuestion__Group__5__Impl3224 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__LikertQuestion__Group__6__Impl_in_rule__LikertQuestion__Group__63254 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_27_in_rule__LikertQuestion__Group__6__Impl3282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group__0__Impl_in_rule__SimpleAnswer__Group__03327 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group__1_in_rule__SimpleAnswer__Group__03330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__NameAssignment_0_in_rule__SimpleAnswer__Group__0__Impl3357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group__1__Impl_in_rule__SimpleAnswer__Group__13387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__0_in_rule__SimpleAnswer__Group__1__Impl3414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__0__Impl_in_rule__SimpleAnswer__Group_1__03449 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__1_in_rule__SimpleAnswer__Group_1__03452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__SimpleAnswer__Group_1__0__Impl3480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__1__Impl_in_rule__SimpleAnswer__Group_1__13511 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__2_in_rule__SimpleAnswer__Group_1__13514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__SimpleAnswer__Group_1__1__Impl3542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__2__Impl_in_rule__SimpleAnswer__Group_1__23573 = new BitSet(new long[]{0x0000000000060000L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__3_in_rule__SimpleAnswer__Group_1__23576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__EnablesAssignment_1_2_in_rule__SimpleAnswer__Group_1__2__Impl3603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__3__Impl_in_rule__SimpleAnswer__Group_1__33633 = new BitSet(new long[]{0x0000000000060000L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__4_in_rule__SimpleAnswer__Group_1__33636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1_3__0_in_rule__SimpleAnswer__Group_1__3__Impl3663 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1__4__Impl_in_rule__SimpleAnswer__Group_1__43694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__SimpleAnswer__Group_1__4__Impl3722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1_3__0__Impl_in_rule__SimpleAnswer__Group_1_3__03763 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1_3__1_in_rule__SimpleAnswer__Group_1_3__03766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__SimpleAnswer__Group_1_3__0__Impl3794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__Group_1_3__1__Impl_in_rule__SimpleAnswer__Group_1_3__13825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleAnswer__EnablesAssignment_1_3_1_in_rule__SimpleAnswer__Group_1_3__1__Impl3852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group__0__Impl_in_rule__Answer__Group__03327 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__Answer__Group__1_in_rule__Answer__Group__03330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Alternatives_0_in_rule__Answer__Group__0__Impl3357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group__1__Impl_in_rule__Answer__Group__13387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__0_in_rule__Answer__Group__1__Impl3414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__0__Impl_in_rule__Answer__Group_1__03449 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__1_in_rule__Answer__Group_1__03452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Answer__Group_1__0__Impl3480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__1__Impl_in_rule__Answer__Group_1__13511 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__2_in_rule__Answer__Group_1__13514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Answer__Group_1__1__Impl3542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__2__Impl_in_rule__Answer__Group_1__23573 = new BitSet(new long[]{0x0000000000060000L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__3_in_rule__Answer__Group_1__23576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__EnablesAssignment_1_2_in_rule__Answer__Group_1__2__Impl3603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__3__Impl_in_rule__Answer__Group_1__33633 = new BitSet(new long[]{0x0000000000060000L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__4_in_rule__Answer__Group_1__33636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1_3__0_in_rule__Answer__Group_1__3__Impl3663 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1__4__Impl_in_rule__Answer__Group_1__43694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Answer__Group_1__4__Impl3722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1_3__0__Impl_in_rule__Answer__Group_1_3__03763 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1_3__1_in_rule__Answer__Group_1_3__03766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Answer__Group_1_3__0__Impl3794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__Group_1_3__1__Impl_in_rule__Answer__Group_1_3__13825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Answer__EnablesAssignment_1_3_1_in_rule__Answer__Group_1_3__1__Impl3852 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__InputAnswer__Group__0__Impl_in_rule__InputAnswer__Group__03886 = new BitSet(new long[]{0x0000000020000000L});
     public static final BitSet FOLLOW_rule__InputAnswer__Group__1_in_rule__InputAnswer__Group__03889 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__InputAnswer__NameAssignment_0_in_rule__InputAnswer__Group__0__Impl3916 = new BitSet(new long[]{0x0000000000000002L});
@@ -6333,9 +6333,9 @@ public class InternalQuestionnaireParser extends AbstractInternalContentAssistPa
     public static final BitSet FOLLOW_RULE_STRING_in_rule__LikertQuestion__NameAssignment_14488 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSINT_in_rule__LikertQuestion__FromAssignment_34519 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSINT_in_rule__LikertQuestion__ToAssignment_54550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleAnswer__NameAssignment_04581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleAnswer__EnablesAssignment_1_24616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleAnswer__EnablesAssignment_1_3_14655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Answer__EnablesAssignment_1_24585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Answer__EnablesAssignment_1_3_14624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleAnswer__NameAssignment4659 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__InputAnswer__NameAssignment_04690 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -573,9 +573,9 @@ ruleAnswer returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
+((
     { 
-        newCompositeNode(grammarAccess.getAnswerAccess().getSimpleAnswerParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getAnswerAccess().getSimpleAnswerParserRuleCall_0_0()); 
     }
     this_SimpleAnswer_0=ruleSimpleAnswer
     { 
@@ -585,14 +585,56 @@ ruleAnswer returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getAnswerAccess().getInputAnswerParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getAnswerAccess().getInputAnswerParserRuleCall_0_1()); 
     }
     this_InputAnswer_1=ruleInputAnswer
     { 
         $current = $this_InputAnswer_1.current; 
         afterParserOrEnumRuleCall();
     }
+)(	otherlv_2='enables question' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getAnswerAccess().getEnablesQuestionKeyword_1_0());
+    }
+	otherlv_3='[' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getAnswerAccess().getLeftSquareBracketKeyword_1_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAnswerRule());
+	        }
+        }
+	otherlv_4=RULE_STRING
+	{
+		newLeafNode(otherlv_4, grammarAccess.getAnswerAccess().getEnablesQuestionCrossReference_1_2_0()); 
+	}
+
 )
+)(	otherlv_5=',' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getAnswerAccess().getCommaKeyword_1_3_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAnswerRule());
+	        }
+        }
+	otherlv_6=RULE_STRING
+	{
+		newLeafNode(otherlv_6, grammarAccess.getAnswerAccess().getEnablesQuestionCrossReference_1_3_1_0()); 
+	}
+
+)
+))*	otherlv_7=']' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getAnswerAccess().getRightSquareBracketKeyword_1_4());
+    }
+)?)
 ;
 
 
@@ -613,11 +655,11 @@ ruleSimpleAnswer returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+(
 (
 		lv_name_0_0=RULE_STRING
 		{
-			newLeafNode(lv_name_0_0, grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0_0()); 
+			newLeafNode(lv_name_0_0, grammarAccess.getSimpleAnswerAccess().getNameSTRINGTerminalRuleCall_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -631,49 +673,7 @@ ruleSimpleAnswer returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_1='enables question' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getSimpleAnswerAccess().getEnablesQuestionKeyword_1_0());
-    }
-	otherlv_2='[' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getSimpleAnswerAccess().getLeftSquareBracketKeyword_1_1());
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getSimpleAnswerRule());
-	        }
-        }
-	otherlv_3=RULE_STRING
-	{
-		newLeafNode(otherlv_3, grammarAccess.getSimpleAnswerAccess().getEnablesQuestionCrossReference_1_2_0()); 
-	}
-
 )
-)(	otherlv_4=',' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getSimpleAnswerAccess().getCommaKeyword_1_3_0());
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getSimpleAnswerRule());
-	        }
-        }
-	otherlv_5=RULE_STRING
-	{
-		newLeafNode(otherlv_5, grammarAccess.getSimpleAnswerAccess().getEnablesQuestionCrossReference_1_3_1_0()); 
-	}
-
-)
-))*	otherlv_6=']' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getSimpleAnswerAccess().getRightSquareBracketKeyword_1_4());
-    }
-)?)
 ;
 
 

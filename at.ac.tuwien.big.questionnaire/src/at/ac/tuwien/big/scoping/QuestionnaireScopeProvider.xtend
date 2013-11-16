@@ -31,7 +31,7 @@ class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider {
 
 		if (context instanceof Answer) {
 			val answer = context as Answer
-			val EList<Question> questions = (answer.eContainer.eContainer as Group).questions
+			var EList<Question> questions = (answer.eContainer.eContainer as Group).questions
 			val parentGroup = answer.eContainer.eContainer
 			var root = answer.eContainer.eContainer.eContainer as Questionnaire
 

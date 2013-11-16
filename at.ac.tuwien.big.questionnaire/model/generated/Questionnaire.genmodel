@@ -28,11 +28,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//LikertQuestion/to"/>
     </genClasses>
     <genClasses ecoreClass="Questionnaire.ecore#//Answer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//Answer/enables"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Questionnaire.ecore#//Answer/name"/>
     </genClasses>
-    <genClasses ecoreClass="Questionnaire.ecore#//SimpleAnswer">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Questionnaire.ecore#//SimpleAnswer/enables"/>
-    </genClasses>
+    <genClasses ecoreClass="Questionnaire.ecore#//SimpleAnswer"/>
     <genClasses ecoreClass="Questionnaire.ecore#//InputAnswer"/>
   </genPackages>
 </genmodel:GenModel>

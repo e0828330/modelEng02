@@ -40,7 +40,7 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQuestionAccess().getAlternatives(), "rule__Question__Alternatives");
 					put(grammarAccess.getOpenQuestionAccess().getAlternatives_0(), "rule__OpenQuestion__Alternatives_0");
 					put(grammarAccess.getClosedQuestionAccess().getAlternatives_1(), "rule__ClosedQuestion__Alternatives_1");
-					put(grammarAccess.getAnswerAccess().getAlternatives(), "rule__Answer__Alternatives");
+					put(grammarAccess.getAnswerAccess().getAlternatives_0(), "rule__Answer__Alternatives_0");
 					put(grammarAccess.getQuestionnaireAccess().getGroup(), "rule__Questionnaire__Group__0");
 					put(grammarAccess.getQuestionnaireAccess().getGroup_4(), "rule__Questionnaire__Group_4__0");
 					put(grammarAccess.getGroupAccess().getGroup(), "rule__Group__Group__0");
@@ -50,9 +50,9 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClosedQuestionAccess().getGroup_6(), "rule__ClosedQuestion__Group_6__0");
 					put(grammarAccess.getClosedQuestionAccess().getGroup_8(), "rule__ClosedQuestion__Group_8__0");
 					put(grammarAccess.getLikertQuestionAccess().getGroup(), "rule__LikertQuestion__Group__0");
-					put(grammarAccess.getSimpleAnswerAccess().getGroup(), "rule__SimpleAnswer__Group__0");
-					put(grammarAccess.getSimpleAnswerAccess().getGroup_1(), "rule__SimpleAnswer__Group_1__0");
-					put(grammarAccess.getSimpleAnswerAccess().getGroup_1_3(), "rule__SimpleAnswer__Group_1_3__0");
+					put(grammarAccess.getAnswerAccess().getGroup(), "rule__Answer__Group__0");
+					put(grammarAccess.getAnswerAccess().getGroup_1(), "rule__Answer__Group_1__0");
+					put(grammarAccess.getAnswerAccess().getGroup_1_3(), "rule__Answer__Group_1_3__0");
 					put(grammarAccess.getInputAnswerAccess().getGroup(), "rule__InputAnswer__Group__0");
 					put(grammarAccess.getSINTAccess().getGroup(), "rule__SINT__Group__0");
 					put(grammarAccess.getQuestionnaireAccess().getNameAssignment_1(), "rule__Questionnaire__NameAssignment_1");
@@ -69,9 +69,9 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLikertQuestionAccess().getNameAssignment_1(), "rule__LikertQuestion__NameAssignment_1");
 					put(grammarAccess.getLikertQuestionAccess().getFromAssignment_3(), "rule__LikertQuestion__FromAssignment_3");
 					put(grammarAccess.getLikertQuestionAccess().getToAssignment_5(), "rule__LikertQuestion__ToAssignment_5");
-					put(grammarAccess.getSimpleAnswerAccess().getNameAssignment_0(), "rule__SimpleAnswer__NameAssignment_0");
-					put(grammarAccess.getSimpleAnswerAccess().getEnablesAssignment_1_2(), "rule__SimpleAnswer__EnablesAssignment_1_2");
-					put(grammarAccess.getSimpleAnswerAccess().getEnablesAssignment_1_3_1(), "rule__SimpleAnswer__EnablesAssignment_1_3_1");
+					put(grammarAccess.getAnswerAccess().getEnablesAssignment_1_2(), "rule__Answer__EnablesAssignment_1_2");
+					put(grammarAccess.getAnswerAccess().getEnablesAssignment_1_3_1(), "rule__Answer__EnablesAssignment_1_3_1");
+					put(grammarAccess.getSimpleAnswerAccess().getNameAssignment(), "rule__SimpleAnswer__NameAssignment");
 					put(grammarAccess.getInputAnswerAccess().getNameAssignment_0(), "rule__InputAnswer__NameAssignment_0");
 				}
 			};

@@ -289,13 +289,22 @@ public interface QuestionnairePackage extends EPackage
   int ANSWER = 6;
 
   /**
+   * The feature id for the '<em><b>Enables</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANSWER__ENABLES = 0;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ANSWER__NAME = 0;
+  int ANSWER__NAME = 1;
 
   /**
    * The number of structural features of the '<em>Answer</em>' class.
@@ -304,7 +313,7 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    * @ordered
    */
-  int ANSWER_FEATURE_COUNT = 1;
+  int ANSWER_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.SimpleAnswerImpl <em>Simple Answer</em>}' class.
@@ -317,6 +326,15 @@ public interface QuestionnairePackage extends EPackage
   int SIMPLE_ANSWER = 7;
 
   /**
+   * The feature id for the '<em><b>Enables</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIMPLE_ANSWER__ENABLES = ANSWER__ENABLES;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -326,22 +344,13 @@ public interface QuestionnairePackage extends EPackage
   int SIMPLE_ANSWER__NAME = ANSWER__NAME;
 
   /**
-   * The feature id for the '<em><b>Enables</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SIMPLE_ANSWER__ENABLES = ANSWER_FEATURE_COUNT + 0;
-
-  /**
    * The number of structural features of the '<em>Simple Answer</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SIMPLE_ANSWER_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 1;
+  int SIMPLE_ANSWER_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link at.ac.tuwien.big.questionnaire.impl.InputAnswerImpl <em>Input Answer</em>}' class.
@@ -352,6 +361,15 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    */
   int INPUT_ANSWER = 8;
+
+  /**
+   * The feature id for the '<em><b>Enables</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_ANSWER__ENABLES = ANSWER__ENABLES;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -542,6 +560,17 @@ public interface QuestionnairePackage extends EPackage
   EClass getAnswer();
 
   /**
+   * Returns the meta object for the reference list '{@link at.ac.tuwien.big.questionnaire.Answer#getEnables <em>Enables</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Enables</em>'.
+   * @see at.ac.tuwien.big.questionnaire.Answer#getEnables()
+   * @see #getAnswer()
+   * @generated
+   */
+  EReference getAnswer_Enables();
+
+  /**
    * Returns the meta object for the attribute '{@link at.ac.tuwien.big.questionnaire.Answer#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -561,17 +590,6 @@ public interface QuestionnairePackage extends EPackage
    * @generated
    */
   EClass getSimpleAnswer();
-
-  /**
-   * Returns the meta object for the reference list '{@link at.ac.tuwien.big.questionnaire.SimpleAnswer#getEnables <em>Enables</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Enables</em>'.
-   * @see at.ac.tuwien.big.questionnaire.SimpleAnswer#getEnables()
-   * @see #getSimpleAnswer()
-   * @generated
-   */
-  EReference getSimpleAnswer_Enables();
 
   /**
    * Returns the meta object for class '{@link at.ac.tuwien.big.questionnaire.InputAnswer <em>Input Answer</em>}'.
@@ -749,6 +767,14 @@ public interface QuestionnairePackage extends EPackage
     EClass ANSWER = eINSTANCE.getAnswer();
 
     /**
+     * The meta object literal for the '<em><b>Enables</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANSWER__ENABLES = eINSTANCE.getAnswer_Enables();
+
+    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -765,14 +791,6 @@ public interface QuestionnairePackage extends EPackage
      * @generated
      */
     EClass SIMPLE_ANSWER = eINSTANCE.getSimpleAnswer();
-
-    /**
-     * The meta object literal for the '<em><b>Enables</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SIMPLE_ANSWER__ENABLES = eINSTANCE.getSimpleAnswer_Enables();
 
     /**
      * The meta object literal for the '{@link at.ac.tuwien.big.questionnaire.impl.InputAnswerImpl <em>Input Answer</em>}' class.

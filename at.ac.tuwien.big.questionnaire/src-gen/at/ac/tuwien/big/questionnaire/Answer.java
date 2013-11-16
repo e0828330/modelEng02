@@ -2,6 +2,8 @@
  */
 package at.ac.tuwien.big.questionnaire;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link at.ac.tuwien.big.questionnaire.Answer#getEnables <em>Enables</em>}</li>
  *   <li>{@link at.ac.tuwien.big.questionnaire.Answer#getName <em>Name</em>}</li>
  * </ul>
  * </p>
@@ -22,6 +25,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Answer extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Enables</b></em>' reference list.
+   * The list contents are of type {@link at.ac.tuwien.big.questionnaire.Question}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Enables</em>' reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Enables</em>' reference list.
+   * @see at.ac.tuwien.big.questionnaire.QuestionnairePackage#getAnswer_Enables()
+   * @model
+   * @generated
+   */
+  EList<Question> getEnables();
+
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->

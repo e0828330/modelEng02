@@ -40,11 +40,11 @@ LikertQuestion:
 /* Answers */
 
 Answer:
-        SimpleAnswer | InputAnswer
+        (SimpleAnswer | InputAnswer) ('enables question' '[' enables+=[Question|STRING](','enables+=[Question|STRING])* ']')?
 ;
 
 SimpleAnswer:
-        name=STRING ('enables question' '[' enables+=[Question|STRING](','enables+=[Question|STRING])* ']')?
+        name=STRING
 ;
 
 InputAnswer:

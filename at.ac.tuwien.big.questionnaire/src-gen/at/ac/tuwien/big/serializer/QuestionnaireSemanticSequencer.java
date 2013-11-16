@@ -45,8 +45,11 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 				}
 				else break;
 			case QuestionnairePackage.INPUT_ANSWER:
-				if(context == grammarAccess.getAnswerRule() ||
-				   context == grammarAccess.getInputAnswerRule()) {
+				if(context == grammarAccess.getAnswerRule()) {
+					sequence_Answer_InputAnswer(context, (InputAnswer) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getInputAnswerRule()) {
 					sequence_InputAnswer(context, (InputAnswer) semanticObject); 
 					return; 
 				}
@@ -72,8 +75,11 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 				}
 				else break;
 			case QuestionnairePackage.SIMPLE_ANSWER:
-				if(context == grammarAccess.getAnswerRule() ||
-				   context == grammarAccess.getSimpleAnswerRule()) {
+				if(context == grammarAccess.getAnswerRule()) {
+					sequence_Answer_SimpleAnswer(context, (SimpleAnswer) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getSimpleAnswerRule()) {
 					sequence_SimpleAnswer(context, (SimpleAnswer) semanticObject); 
 					return; 
 				}
@@ -81,6 +87,24 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     (name=STRING (enables+=[Question|STRING] enables+=[Question|STRING]*)?)
+	 */
+	protected void sequence_Answer_InputAnswer(EObject context, InputAnswer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=STRING (enables+=[Question|STRING] enables+=[Question|STRING]*)?)
+	 */
+	protected void sequence_Answer_SimpleAnswer(EObject context, SimpleAnswer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -105,14 +129,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	 *     name=STRING
 	 */
 	protected void sequence_InputAnswer(EObject context, InputAnswer semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, QuestionnairePackage.Literals.ANSWER__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, QuestionnairePackage.Literals.ANSWER__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInputAnswerAccess().getNameSTRINGTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -165,7 +182,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING (enables+=[Question|STRING] enables+=[Question|STRING]*)?)
+	 *     name=STRING
 	 */
 	protected void sequence_SimpleAnswer(EObject context, SimpleAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

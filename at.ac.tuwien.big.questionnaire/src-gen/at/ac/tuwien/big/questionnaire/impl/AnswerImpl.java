@@ -3,14 +3,21 @@
 package at.ac.tuwien.big.questionnaire.impl;
 
 import at.ac.tuwien.big.questionnaire.Answer;
+import at.ac.tuwien.big.questionnaire.Question;
 import at.ac.tuwien.big.questionnaire.QuestionnairePackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,6 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link at.ac.tuwien.big.questionnaire.impl.AnswerImpl#getEnables <em>Enables</em>}</li>
  *   <li>{@link at.ac.tuwien.big.questionnaire.impl.AnswerImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
@@ -27,6 +35,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer
 {
+  /**
+   * The cached value of the '{@link #getEnables() <em>Enables</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEnables()
+   * @generated
+   * @ordered
+   */
+  protected EList<Question> enables;
+
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -73,6 +91,20 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Question> getEnables()
+  {
+    if (enables == null)
+    {
+      enables = new EObjectResolvingEList<Question>(Question.class, this, QuestionnairePackage.ANSWER__ENABLES);
+    }
+    return enables;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getName()
   {
     return name;
@@ -101,6 +133,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer
   {
     switch (featureID)
     {
+      case QuestionnairePackage.ANSWER__ENABLES:
+        return getEnables();
       case QuestionnairePackage.ANSWER__NAME:
         return getName();
     }
@@ -112,11 +146,16 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
+      case QuestionnairePackage.ANSWER__ENABLES:
+        getEnables().clear();
+        getEnables().addAll((Collection<? extends Question>)newValue);
+        return;
       case QuestionnairePackage.ANSWER__NAME:
         setName((String)newValue);
         return;
@@ -134,6 +173,9 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer
   {
     switch (featureID)
     {
+      case QuestionnairePackage.ANSWER__ENABLES:
+        getEnables().clear();
+        return;
       case QuestionnairePackage.ANSWER__NAME:
         setName(NAME_EDEFAULT);
         return;
@@ -151,6 +193,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer
   {
     switch (featureID)
     {
+      case QuestionnairePackage.ANSWER__ENABLES:
+        return enables != null && !enables.isEmpty();
       case QuestionnairePackage.ANSWER__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }

@@ -320,9 +320,19 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getAnswer_Enables()
+  {
+    return (EReference)answerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getAnswer_Name()
   {
-    return (EAttribute)answerEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)answerEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -333,16 +343,6 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
   public EClass getSimpleAnswer()
   {
     return simpleAnswerEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSimpleAnswer_Enables()
-  {
-    return (EReference)simpleAnswerEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -407,10 +407,10 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
     createEAttribute(likertQuestionEClass, LIKERT_QUESTION__TO);
 
     answerEClass = createEClass(ANSWER);
+    createEReference(answerEClass, ANSWER__ENABLES);
     createEAttribute(answerEClass, ANSWER__NAME);
 
     simpleAnswerEClass = createEClass(SIMPLE_ANSWER);
-    createEReference(simpleAnswerEClass, SIMPLE_ANSWER__ENABLES);
 
     inputAnswerEClass = createEClass(INPUT_ANSWER);
   }
@@ -473,10 +473,10 @@ public class QuestionnairePackageImpl extends EPackageImpl implements Questionna
     initEAttribute(getLikertQuestion_To(), ecorePackage.getEInt(), "to", null, 0, 1, LikertQuestion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(answerEClass, Answer.class, "Answer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAnswer_Enables(), this.getQuestion(), null, "enables", null, 0, -1, Answer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAnswer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Answer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(simpleAnswerEClass, SimpleAnswer.class, "SimpleAnswer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getSimpleAnswer_Enables(), this.getQuestion(), null, "enables", null, 0, -1, SimpleAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(inputAnswerEClass, InputAnswer.class, "InputAnswer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

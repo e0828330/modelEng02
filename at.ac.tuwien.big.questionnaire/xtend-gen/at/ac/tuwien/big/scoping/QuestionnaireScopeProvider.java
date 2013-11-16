@@ -34,7 +34,7 @@ public class QuestionnaireScopeProvider extends AbstractDeclarativeScopeProvider
       final Answer answer = ((Answer) context);
       EObject _eContainer = answer.eContainer();
       EObject _eContainer_1 = _eContainer.eContainer();
-      final EList<Question> questions = ((Group) _eContainer_1).getQuestions();
+      EList<Question> questions = ((Group) _eContainer_1).getQuestions();
       EObject _eContainer_2 = answer.eContainer();
       final EObject parentGroup = _eContainer_2.eContainer();
       EObject _eContainer_3 = answer.eContainer();
