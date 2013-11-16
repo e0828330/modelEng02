@@ -652,9 +652,26 @@ ruleSimpleAnswer returns [EObject current=null]
 	}
 
 )
-)	otherlv_4=']' 
+)(	otherlv_4=',' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getSimpleAnswerAccess().getRightSquareBracketKeyword_1_3());
+    	newLeafNode(otherlv_4, grammarAccess.getSimpleAnswerAccess().getCommaKeyword_1_3_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSimpleAnswerRule());
+	        }
+        }
+	otherlv_5=RULE_STRING
+	{
+		newLeafNode(otherlv_5, grammarAccess.getSimpleAnswerAccess().getEnablesQuestionCrossReference_1_3_1_0()); 
+	}
+
+)
+))*	otherlv_6=']' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getSimpleAnswerAccess().getRightSquareBracketKeyword_1_4());
     }
 )?)
 ;

@@ -52,6 +52,7 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLikertQuestionAccess().getGroup(), "rule__LikertQuestion__Group__0");
 					put(grammarAccess.getSimpleAnswerAccess().getGroup(), "rule__SimpleAnswer__Group__0");
 					put(grammarAccess.getSimpleAnswerAccess().getGroup_1(), "rule__SimpleAnswer__Group_1__0");
+					put(grammarAccess.getSimpleAnswerAccess().getGroup_1_3(), "rule__SimpleAnswer__Group_1_3__0");
 					put(grammarAccess.getInputAnswerAccess().getGroup(), "rule__InputAnswer__Group__0");
 					put(grammarAccess.getSINTAccess().getGroup(), "rule__SINT__Group__0");
 					put(grammarAccess.getQuestionnaireAccess().getNameAssignment_1(), "rule__Questionnaire__NameAssignment_1");
@@ -70,6 +71,7 @@ public class QuestionnaireParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLikertQuestionAccess().getToAssignment_5(), "rule__LikertQuestion__ToAssignment_5");
 					put(grammarAccess.getSimpleAnswerAccess().getNameAssignment_0(), "rule__SimpleAnswer__NameAssignment_0");
 					put(grammarAccess.getSimpleAnswerAccess().getEnablesAssignment_1_2(), "rule__SimpleAnswer__EnablesAssignment_1_2");
+					put(grammarAccess.getSimpleAnswerAccess().getEnablesAssignment_1_3_1(), "rule__SimpleAnswer__EnablesAssignment_1_3_1");
 					put(grammarAccess.getInputAnswerAccess().getNameAssignment_0(), "rule__InputAnswer__NameAssignment_0");
 				}
 			};

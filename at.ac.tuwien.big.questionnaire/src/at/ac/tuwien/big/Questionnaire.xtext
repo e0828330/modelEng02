@@ -44,7 +44,7 @@ Answer:
 ;
 
 SimpleAnswer:
-        name=STRING ('enables question' '[' enables=[Question|STRING] ']')?
+        name=STRING ('enables question' '[' enables+=[Question|STRING](','enables+=[Question|STRING])* ']')?
 ;
 
 InputAnswer:

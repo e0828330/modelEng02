@@ -367,13 +367,18 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cEnablesAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final CrossReference cEnablesQuestionCrossReference_1_2_0 = (CrossReference)cEnablesAssignment_1_2.eContents().get(0);
 		private final RuleCall cEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1 = (RuleCall)cEnablesQuestionCrossReference_1_2_0.eContents().get(1);
-		private final Keyword cRightSquareBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		private final Group cGroup_1_3 = (Group)cGroup_1.eContents().get(3);
+		private final Keyword cCommaKeyword_1_3_0 = (Keyword)cGroup_1_3.eContents().get(0);
+		private final Assignment cEnablesAssignment_1_3_1 = (Assignment)cGroup_1_3.eContents().get(1);
+		private final CrossReference cEnablesQuestionCrossReference_1_3_1_0 = (CrossReference)cEnablesAssignment_1_3_1.eContents().get(0);
+		private final RuleCall cEnablesQuestionSTRINGTerminalRuleCall_1_3_1_0_1 = (RuleCall)cEnablesQuestionCrossReference_1_3_1_0.eContents().get(1);
+		private final Keyword cRightSquareBracketKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
 		
 		//SimpleAnswer:
-		//	name=STRING ("enables question" "[" enables=[Question|STRING] "]")?;
+		//	name=STRING ("enables question" "[" enables+=[Question|STRING] ("," enables+=[Question|STRING])* "]")?;
 		public ParserRule getRule() { return rule; }
 
-		//name=STRING ("enables question" "[" enables=[Question|STRING] "]")?
+		//name=STRING ("enables question" "[" enables+=[Question|STRING] ("," enables+=[Question|STRING])* "]")?
 		public Group getGroup() { return cGroup; }
 
 		//name=STRING
@@ -382,7 +387,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_0_0() { return cNameSTRINGTerminalRuleCall_0_0; }
 
-		//("enables question" "[" enables=[Question|STRING] "]")?
+		//("enables question" "[" enables+=[Question|STRING] ("," enables+=[Question|STRING])* "]")?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"enables question"
@@ -391,7 +396,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		//"["
 		public Keyword getLeftSquareBracketKeyword_1_1() { return cLeftSquareBracketKeyword_1_1; }
 
-		//enables=[Question|STRING]
+		//enables+=[Question|STRING]
 		public Assignment getEnablesAssignment_1_2() { return cEnablesAssignment_1_2; }
 
 		//[Question|STRING]
@@ -400,8 +405,23 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1() { return cEnablesQuestionSTRINGTerminalRuleCall_1_2_0_1; }
 
+		//("," enables+=[Question|STRING])*
+		public Group getGroup_1_3() { return cGroup_1_3; }
+
+		//","
+		public Keyword getCommaKeyword_1_3_0() { return cCommaKeyword_1_3_0; }
+
+		//enables+=[Question|STRING]
+		public Assignment getEnablesAssignment_1_3_1() { return cEnablesAssignment_1_3_1; }
+
+		//[Question|STRING]
+		public CrossReference getEnablesQuestionCrossReference_1_3_1_0() { return cEnablesQuestionCrossReference_1_3_1_0; }
+
+		//STRING
+		public RuleCall getEnablesQuestionSTRINGTerminalRuleCall_1_3_1_0_1() { return cEnablesQuestionSTRINGTerminalRuleCall_1_3_1_0_1; }
+
 		//"]"
-		public Keyword getRightSquareBracketKeyword_1_3() { return cRightSquareBracketKeyword_1_3; }
+		public Keyword getRightSquareBracketKeyword_1_4() { return cRightSquareBracketKeyword_1_4; }
 	}
 
 	public class InputAnswerElements extends AbstractParserRuleElementFinder {
@@ -570,7 +590,7 @@ public class QuestionnaireGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SimpleAnswer:
-	//	name=STRING ("enables question" "[" enables=[Question|STRING] "]")?;
+	//	name=STRING ("enables question" "[" enables+=[Question|STRING] ("," enables+=[Question|STRING])* "]")?;
 	public SimpleAnswerElements getSimpleAnswerAccess() {
 		return (pSimpleAnswer != null) ? pSimpleAnswer : (pSimpleAnswer = new SimpleAnswerElements());
 	}

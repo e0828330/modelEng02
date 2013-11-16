@@ -6,12 +6,13 @@ import at.ac.tuwien.big.questionnaire.Question;
 import at.ac.tuwien.big.questionnaire.QuestionnairePackage;
 import at.ac.tuwien.big.questionnaire.SimpleAnswer;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,14 +30,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class SimpleAnswerImpl extends AnswerImpl implements SimpleAnswer
 {
   /**
-   * The cached value of the '{@link #getEnables() <em>Enables</em>}' reference.
+   * The cached value of the '{@link #getEnables() <em>Enables</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getEnables()
    * @generated
    * @ordered
    */
-  protected Question enables;
+  protected EList<Question> enables;
 
   /**
    * <!-- begin-user-doc -->
@@ -64,42 +65,13 @@ public class SimpleAnswerImpl extends AnswerImpl implements SimpleAnswer
    * <!-- end-user-doc -->
    * @generated
    */
-  public Question getEnables()
+  public EList<Question> getEnables()
   {
-    if (enables != null && enables.eIsProxy())
+    if (enables == null)
     {
-      InternalEObject oldEnables = (InternalEObject)enables;
-      enables = (Question)eResolveProxy(oldEnables);
-      if (enables != oldEnables)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, QuestionnairePackage.SIMPLE_ANSWER__ENABLES, oldEnables, enables));
-      }
+      enables = new EObjectResolvingEList<Question>(Question.class, this, QuestionnairePackage.SIMPLE_ANSWER__ENABLES);
     }
     return enables;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Question basicGetEnables()
-  {
-    return enables;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setEnables(Question newEnables)
-  {
-    Question oldEnables = enables;
-    enables = newEnables;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, QuestionnairePackage.SIMPLE_ANSWER__ENABLES, oldEnables, enables));
   }
 
   /**
@@ -113,8 +85,7 @@ public class SimpleAnswerImpl extends AnswerImpl implements SimpleAnswer
     switch (featureID)
     {
       case QuestionnairePackage.SIMPLE_ANSWER__ENABLES:
-        if (resolve) return getEnables();
-        return basicGetEnables();
+        return getEnables();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,13 +95,15 @@ public class SimpleAnswerImpl extends AnswerImpl implements SimpleAnswer
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case QuestionnairePackage.SIMPLE_ANSWER__ENABLES:
-        setEnables((Question)newValue);
+        getEnables().clear();
+        getEnables().addAll((Collection<? extends Question>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,7 +120,7 @@ public class SimpleAnswerImpl extends AnswerImpl implements SimpleAnswer
     switch (featureID)
     {
       case QuestionnairePackage.SIMPLE_ANSWER__ENABLES:
-        setEnables((Question)null);
+        getEnables().clear();
         return;
     }
     super.eUnset(featureID);
@@ -164,7 +137,7 @@ public class SimpleAnswerImpl extends AnswerImpl implements SimpleAnswer
     switch (featureID)
     {
       case QuestionnairePackage.SIMPLE_ANSWER__ENABLES:
-        return enables != null;
+        return enables != null && !enables.isEmpty();
     }
     return super.eIsSet(featureID);
   }

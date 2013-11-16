@@ -165,7 +165,7 @@ public class QuestionnaireSemanticSequencer extends AbstractDelegatingSemanticSe
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING enables=[Question|STRING]?)
+	 *     (name=STRING (enables+=[Question|STRING] enables+=[Question|STRING]*)?)
 	 */
 	protected void sequence_SimpleAnswer(EObject context, SimpleAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
